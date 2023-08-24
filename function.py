@@ -15,7 +15,7 @@ relays=[
 {"id":"ultrasound","url":"https://relay.ultrasound.money/relay/v1/data/bidtraces/proposer_payload_delivered?limit=100"},
 {"id":"aestus","url":"https://mainnet.aestus.live/relay/v1/data/bidtraces/proposer_payload_delivered?limit=100"}
 ]
-latestSlotStored=0 # TO-DO should be parsed from bigquery table, initially 0 as we parse from the start
+latestSlotStored=7171966-10 # TO-DO should be parsed from bigquery table, initially 0 as we parse from the start
 startSlot = latestSlotStored
 def getRelayData(id,url,cursor):
     global startSlot
@@ -52,3 +52,5 @@ def relayUpdater():
             if (cursor=="ERR"):
                 print ("error on relay: "+str(id))
                 break
+
+relayUpdater()
