@@ -6,8 +6,6 @@ import glob
 import pydata_google_auth
 from google.cloud import bigquery
 
-print(os.getcwd())
-
 # BigQuery authentication
 credentials = pydata_google_auth.get_user_credentials(["https://www.googleapis.com/auth/bigquery"])
 client = bigquery.Client(project='avalanche-304119', credentials=credentials)
@@ -26,7 +24,7 @@ relays = [
 {"id":"aestus","url":"https://mainnet.aestus.live/relay/v1/data/bidtraces/proposer_payload_delivered?limit=100"}
 ]
 
-latestSlotStored = 7213000 # TO-DO should be parsed from bigquery table, initially 0 as we parse from the start
+latestSlotStored = 7205000 # TO-DO should be parsed from bigquery table, initially 0 as we parse from the start
 startSlot = latestSlotStored
 
 def getRelayData(id,url,cursor):
