@@ -1,13 +1,15 @@
+import sys
 import requests
 import json
 import os
 import time
 import glob
-import pydata_google_auth
 from google.cloud import bigquery
+import logging
+logging.basicConfig(level=logging.INFO)
+from reader_big_query import get_latest_slot
 
-credentials = pydata_google_auth.get_user_credentials(["https://www.googleapis.com/auth/bigquery"])   # BigQuery authentication
-client = bigquery.Client(project='avalanche-304119', credentials=credentials)
+client = bigquery.Client(project='avalanche-304119')
 
 relays = [
 {"id":"eden","url":"https://relay.edennetwork.io/relay/v1/data/bidtraces/proposer_payload_delivered?limit=100"},
@@ -21,12 +23,11 @@ relays = [
 {"id":"aestus","url":"https://mainnet.aestus.live/relay/v1/data/bidtraces/proposer_payload_delivered?limit=100"}
 ]
 
-query = ("SELECT MAX(slot) as latest_slot FROM `avalanche-304119.ethereum_mev_boost.mev_boost_staging`")   # Query to find the maximum value of the "slot" column
-query_job = client.query(query)
-results = query_job.result()
-
-for row in results:   # Fetch the latest slot and increment by 1
-    startSlot = row.latest_slot + 1
+logging.info("starting relay data ETL")
+startSlot = get_latest_slot(client)
+if startSlot is None:
+    sys.exit(1)
+logging.info(f"The next start slot is {startSlot}")
 
 def getRelayData(id, url, cursor, current_file_size, current_file_index):
     global startSlot
@@ -41,6 +42,7 @@ def getRelayData(id, url, cursor, current_file_size, current_file_index):
         x = requests.get(url)
         y = json.loads(x.text)
 
+        logging.info(f"opening file for id: {id} and index: {current_file_index}")
         outfile = open(f"relayData/{id}_{current_file_index}.ndjson", "a")
 
         for slot in y:
