@@ -10,8 +10,9 @@ from google.cloud import bigquery
 # Setting up logging configuration
 logging.basicConfig(filename='progress.log', filemode='w', level=logging.INFO)
 
-# Importing function to get the latest slot from the big query
+# Import functions that get latest slot & push data to BQ
 from reader_big_query import get_latest_slot
+from writer_big_query import pushToBigQuery
 
 # Initializing the BigQuery client
 client = bigquery.Client(project='avalanche-304119')
@@ -42,7 +43,7 @@ if startSlot is None:
     sys.exit(1)
 logging.info(f"Parsing relay data from newest slot back to and including slot {startSlot}")
 
-startSlot = 7320000  # Remove this later, it is for testing purposes
+startSlot = 7328786  # Remove this later, it is for testing purposes
 
 # Function that gets relay data
 def getRelayData(id, url, cursor, current_file_size, file_count):
@@ -151,60 +152,33 @@ def relayUpdater():
 
     return success 
 
-# Function to modify file names
+# Function to modify file names, if renaming files fails, terminate the script and do not push to BQ
 def correctFileNames():
+    try:
+        # Loop over the files, read each file
+        files = glob.glob('relayData/*_*.ndjson')
+        for file in files:
+            with open(file, 'r') as f:
+                lines = f.readlines()
+            
+            # Modify the file name to include the first and last slot numbers of each file
+            if lines:
+                id = json.loads(lines[0])["relay"]
+                start_slot = json.loads(lines[0])["slot"]
+                end_slot = json.loads(lines[-1])["slot"]
+                new_file_name = f"relayData/{id}_{start_slot}-{end_slot}.ndjson"
+                os.rename(file, new_file_name)
+                logging.info(f"File {file} renamed to {new_file_name}")
+            else:
+                # If a file is empty it means there was no new data for the relay, delete the file
+                logging.info(f"Removing file {file}")
+                os.remove(file)
 
-    # Loop over the files, read each file
-    files = glob.glob('relayData/*_*.ndjson')
-    for file in files:
-        with open(file, 'r') as f:
-            lines = f.readlines()
-        
-        # Modify the file name to include the first and last slot numbers of each file
-        if lines:
-            id = json.loads(lines[0])["relay"]
-            start_slot = json.loads(lines[0])["slot"]
-            end_slot = json.loads(lines[-1])["slot"]
-            new_file_name = f"relayData/{id}_{start_slot}-{end_slot}.ndjson"
-            os.rename(file, new_file_name)
-            logging.info(f"File {file} renamed to {new_file_name}")
-        else:
-            # If a file is empty it means there was no new data for the relay, delete the file
-            logging.info(f"Removing file {file}")
-            os.remove(file)
-
-# Function to push relay data into BQ
-def pushToBigQuery():
-
-    # Define BQ dataset & table
-    dataset_id = 'ethereum_mev_boost'
-    table_id = 'mev_boost_staging'
-
-    # Create a table reference
-    table_ref = client.dataset(dataset_id).table(table_id)
-
-    # Define job configuration
-    job_config = bigquery.LoadJobConfig()
-    job_config.source_format = bigquery.SourceFormat.NEWLINE_DELIMITED_JSON
-
-    # Fetch all .ndjson files
-    json_files = glob.glob("relayData/*.ndjson") 
-
-    # Iterate through files and load data in batches
-    for json_file in json_files: 
-        with open(json_file, 'rb') as source_file:
-            job = client.load_table_from_file(
-                source_file,
-                table_ref,
-                location='US',
-                job_config=job_config,
-            )
-        job.result()
-        logging.info(f"File {json_file} pushed to BQ")
-
-    logging.info("Data successfully pushed to BQ")
+    except Exception as e:
+        logging.error(f"Error occured when modifying file names: {e}")
+        sys.exit(1)
 
 # Modify file names and push to BQ if data parsing was successful
 if relayUpdater():
     correctFileNames()
-    pushToBigQuery()
+    pushToBigQuery(client)
