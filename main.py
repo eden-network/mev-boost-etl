@@ -19,7 +19,7 @@ client = bigquery.Client(project='avalanche-304119')
 
 # Batch size & rate limit
 batchSize = 100
-rateLimitSeconds = 1
+rateLimitSeconds = 2
 
 # List of relay URLs and their respective IDs
 relays = [
@@ -42,8 +42,6 @@ startSlot = get_latest_slot(client)
 if startSlot is None:
     sys.exit(1)
 logging.info(f"Parsing relay data from newest slot back to and including slot {startSlot}")
-
-startSlot = 7328786  # Remove this later, it is for testing purposes
 
 # Function that gets relay data
 def getRelayData(id, url, cursor, current_file_size, file_count):

@@ -12,6 +12,7 @@ def get_latest_slot(client):
             return None
 
         results = query_job.result()
+
     except BadRequest as e:
         logging.error(f"Bad request error: {e}")
         return None
@@ -29,8 +30,8 @@ def get_latest_slot(client):
 
     row = rows[0]
     if row.latest_slot is None:
-        logging.error("Received a null value for latest_slot")
-        return None
+        logging.error("The table is empty, started parsing from beginning")
+        return 0
 
     if not isinstance(row.latest_slot, int):
         logging.error(f"Expected an integer value for latest_slot, got: {type(row.latest_slot)}")

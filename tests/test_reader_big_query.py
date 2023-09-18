@@ -78,7 +78,7 @@ class TestGetLatestSlot(unittest.TestCase):
         mock_client.query.return_value = mock_query_job
 
         result = get_latest_slot(mock_client)
-        self.assertIsNone(result)
+        self.assertEqual(result, 0)
 
     def test_get_latest_slot_non_integer_slot(self):
         mock_client = Mock()
