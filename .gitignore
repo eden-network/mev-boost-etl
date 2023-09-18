@@ -270,3 +270,4 @@ $RECYCLE.BIN/
 
 # Custom ignores
 relayData/*.ndjson
+progress.log
