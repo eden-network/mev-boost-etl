@@ -6,20 +6,19 @@ import time
 import glob
 import logging
 from google.cloud import bigquery
+from reader_big_query import get_latest_slot
+from writer_big_query import push_to_BQ
+from ndjson_file_operations import *
 
 # Setting up logging configuration
 logging.basicConfig(filename='progress.log', filemode='w', level=logging.INFO)
 
-# Import functions that get latest slot & push data to BQ
-from reader_big_query import get_latest_slot
-from writer_big_query import pushToBigQuery
-
-# Initializing the BigQuery client
+# Initializing the BQ client
 client = bigquery.Client(project='avalanche-304119')
 
 # Batch size & rate limit
 batchSize = 100
-rateLimitSeconds = 1
+rateLimitSeconds = 2
 
 # List of relay URLs and their respective IDs
 relays = [
@@ -34,7 +33,6 @@ relays = [
 {"id":"aestus","url":f"https://mainnet.aestus.live/relay/v1/data/bidtraces/proposer_payload_delivered?limit={batchSize}"}
 ]
 
-# Logging the start of the data extraction process
 logging.info("Starting relay data extraction")
 
 # Getting the latest parsed slot from the BQ database
@@ -49,7 +47,7 @@ startSlot = 7328786  # Remove this later, it is for testing purposes
 def getRelayData(id, url, cursor, current_file_size, file_count):
     global startSlot
 
-    # Max file size is 15 MB (it is set to 14.9 but the latest entry before stopping should be a few bytes over 14.9, that's fine but it must not exceed 15)
+    # Max file size is 15 MB (it's set to 14.9 but the latest entry before stopping should be a few bytes over 14.9)
     max_file_size = 14.9 * 1024 * 1024  
 
     # Modifying URL based on the cursor position, for the first 100 rows cursor is set to 'latest', afterwards we specify a position to fetch the next 100 sized batches
@@ -152,33 +150,7 @@ def relayUpdater():
 
     return success 
 
-# Function to modify file names, if renaming files fails, terminate the script and do not push to BQ
-def correctFileNames():
-    try:
-        # Loop over the files, read each file
-        files = glob.glob('relayData/*_*.ndjson')
-        for file in files:
-            with open(file, 'r') as f:
-                lines = f.readlines()
-            
-            # Modify the file name to include the first and last slot numbers of each file
-            if lines:
-                id = json.loads(lines[0])["relay"]
-                start_slot = json.loads(lines[0])["slot"]
-                end_slot = json.loads(lines[-1])["slot"]
-                new_file_name = f"relayData/{id}_{start_slot}-{end_slot}.ndjson"
-                os.rename(file, new_file_name)
-                logging.info(f"File {file} renamed to {new_file_name}")
-            else:
-                # If a file is empty it means there was no new data for the relay, delete the file
-                logging.info(f"Removing file {file}")
-                os.remove(file)
-
-    except Exception as e:
-        logging.error(f"Error occured when modifying file names: {e}")
-        sys.exit(1)
-
 # Modify file names and push to BQ if data parsing was successful
 if relayUpdater():
-    correctFileNames()
-    pushToBigQuery(client)
+    correct_file_names()
+    push_to_BQ(client)

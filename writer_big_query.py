@@ -4,7 +4,7 @@ import sys
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
 
-def pushToBigQuery(client):
+def push_to_BQ(client):
 
     # Define BQ dataset & table
     dataset_id = 'ethereum_mev_boost'
