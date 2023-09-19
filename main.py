@@ -8,15 +8,13 @@ import logging
 from google.cloud import bigquery
 from reader_big_query import get_latest_slot
 from writer_big_query import push_to_BQ
-from ndjson_file_operations import *
+from ndjson_file_operations import correct_file_names
 
-# Setting up logging configuration
+# Setting up logging configuration / initializing BQ client
 logging.basicConfig(filename='progress.log', filemode='w', level=logging.INFO)
-
-# Initializing the BQ client
 client = bigquery.Client(project='avalanche-304119')
 
-# Batch size & rate limit
+# Setting up batch size & rate limit
 batchSize = 100
 rateLimitSeconds = 2
 
@@ -41,7 +39,7 @@ if startSlot is None:
     sys.exit(1)
 logging.info(f"Parsing relay data from newest slot back to and including slot {startSlot}")
 
-startSlot = 7328786  # Remove this later, it is for testing purposes
+startSlot = 7360773
 
 # Function that gets relay data
 def getRelayData(id, url, cursor, current_file_size, file_count):
@@ -150,7 +148,7 @@ def relayUpdater():
 
     return success 
 
-# Modify file names and push to BQ if data parsing was successful
+# If parsing relay data was successful, modify file names and push data to BQ
 if relayUpdater():
     correct_file_names()
     push_to_BQ(client)
