@@ -1,6 +1,4 @@
 import sys
-import requests
-import json
 import os
 import time
 import glob
@@ -9,8 +7,9 @@ from google.cloud import bigquery
 from reader_big_query import get_latest_slot
 from writer_big_query import push_to_BQ
 from ndjson_file_operations import correct_file_names
+from relay_data_functions import *
 
-# Setting up logging configuration / initializing BQ client
+# Setting up logging configuration & initializing BQ client
 logging.basicConfig(filename='progress.log', filemode='w', level=logging.INFO)
 client = bigquery.Client(project='avalanche-304119')
 
@@ -39,76 +38,51 @@ if startSlot is None:
     sys.exit(1)
 logging.info(f"Parsing relay data from newest slot back to and including slot {startSlot}")
 
-startSlot = 7360773
-
-# Function that gets relay data
-def getRelayData(id, url, cursor, current_file_size, file_count):
+def get_relay_data(id, url, cursor, current_file_size, file_count):
     global startSlot
 
-    # Max file size is 15 MB (it's set to 14.9 but the latest entry before stopping should be a few bytes over 14.9)
-    max_file_size = 14.9 * 1024 * 1024  
+    max_file_size = 15 * 1024 * 1024  # Max file size is 15 MB
 
-    # Modifying URL based on the cursor position, for the first 100 rows cursor is set to 'latest', afterwards we specify a position to fetch the next 100 sized batches
-    if cursor == "latest":
-        url = url
-    else:
-        url = url + "&cursor=" + str(cursor)
-
-    logging.info(f"Current URL is {url}")
-
-    try:
-        # Making a request to the relay URL and parsing the JSON response
-        x = requests.get(url)
-        y = json.loads(x.text)
-
-        # Opening a file to store relay data (will be renamed at the end when slot numbers are known)
-        outfile = open(f"relayData/{id}_{file_count}.ndjson", "a")
+    # Fetch data from the URL
+    error, data = fetch_data_from_url(url, cursor)
+    if error == "ERR":
+        logging.error("An error occurred while fetching data.")
+        return "ERR"
+    
+    # Open a file to store relay data
+    with open(f"relayData/{id}_{file_count}.ndjson", "a") as outfile:
         logging.info(f"Opening file for id: {id}")
 
-        # Looping through the data and writing it to the file
-        for slot in y:
-            slot["relay"] = id
+        # Loop through the data and write it to the file
+        for slot in data:
+            error, current_file_size = process_individual_slot(id, outfile, slot, max_file_size, current_file_size)
 
-            # If the current slot number is less than the latest parsed slot saved in BigQuery, stop parsing data for this relay
-            if int(slot["slot"]) < startSlot:
-                logging.info(f"All new data for relay {id} has been parsed, moving on to the next relay")
+            if error == "NEW_FILE":
+                logging.info(f"Data for relay {id} has reached the file cap, creating a new file for the relay")
+
+                # Close the current file and reset counters
                 outfile.close()
+                current_file_size = 0
+                file_count += 1
+
+                # Open a new file
+                outfile = open(f"relayData/{id}_{file_count}.ndjson", "a")
+                
+                # Write the current slot to the new file
+                _, current_file_size = process_individual_slot(outfile, slot, max_file_size, current_file_size)
+
+            if int(slot["slot"]) < startSlot:
+                logging.info(f"All new data for relay {id} has been parsed, moving on to the next relay.")
                 return "0", current_file_size, file_count
 
-            # Write the current slot data to the file
-            json_object = json.dumps(slot)
-            outfile.write(json_object + '\n')  
+    # Determine the next cursor based on the last slot in the data batch
+    next_cursor = determine_next_cursor(data, startSlot)
 
-            # Encode the data into bytes and add it to the file size tracker (to make sure it doesn't go over 15 MB)
-            line_size = len(json_object.encode('utf-8'))
-            current_file_size += line_size
-
-            # If the current file size exceeds the size limit, reset the size, increment the file counter and create a new file for the same relay
-            if current_file_size > max_file_size:
-                logging.info(f"Data for relay {id} has reached the file cap, creating new file for the relay")
-                outfile.close()
-                current_file_size = 0  
-                file_count += 1
-                outfile = open(f"relayData/{id}_{file_count}.ndjson", "a")
-
-        # If the current batch does not exceed the file size or slot number tresholds, close the file in preparation for the next batch of 100 entries
-        else:
-            outfile.close()
-            
-        # After processing all the slots in the current batch, we get the slot number of the last slot in the batch to use as the cursor for the next batch. If the batch is empty (y is an empty list), we set the returnCursor to '0'
-        returnCursor = y[-1]["slot"] if y else "0"
-        logging.info(f"Latest slot in the batch is {returnCursor}")
-
-        # We return the cursor for the next batch (decremented by 1 to avoid missing any slots), along with the current file size and file count, to continue from where we left in the next iteration. If we set the cursor to '0' and decrement by 1, we would perform an API call with -1, resulting in an error, which will return 'ERR' in the following code, thus ending the parsing
-        return int(returnCursor) - 1, current_file_size, file_count
-
-    # If an error occurs, terminate the script and do not push data to BigQuery
-    except Exception as e:
-        logging.error(f"An error occurred: {e}")
-        return "ERR"
-
+    logging.info(f"Next cursor value: {next_cursor}")
+    return next_cursor, current_file_size, file_count
+        
 # Function to update the relay data
-def relayUpdater():
+def relay_updater():
     global current_file_size
 
     # Variable to indicate if all data has successfully been parsed, if it was, modify file names and push into BigQuery
@@ -133,7 +107,7 @@ def relayUpdater():
         
         # Loop that gets data for each relay by calling the "getRelayData" function, cursor will be "0" when all data has been parsed up to the latest saved slot in BigQuery, stop parsing when that happens. Sleep the code for the API rate limits
         while cursor != "0":   
-            cursor, current_file_size, file_count = getRelayData(id, url, cursor, current_file_size, file_count)
+            cursor, current_file_size, file_count = get_relay_data(id, url, cursor, current_file_size, file_count)
             time.sleep(rateLimitSeconds)   
             logging.info(f"Current cursor value: {cursor}")
 
@@ -149,6 +123,6 @@ def relayUpdater():
     return success 
 
 # If parsing relay data was successful, modify file names and push data to BQ
-if relayUpdater():
+if relay_updater():
     correct_file_names()
     push_to_BQ(client)
