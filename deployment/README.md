@@ -33,11 +33,11 @@ gcloud config set project $public_project_id
 
 One service account is needed. It will require persmissions to:
 
-- Read and write to its staging dataset in eden-data-private
-- Read and write to its production dataset in eden-data-public
+- Read and write to its staging dataset in `eden-data-private`
+- Read and write to its production dataset in `eden-data-public`
 - Invoke a cloud run task from cloud scheduler
 
-This service account needs to be created in the eden-data-private project.
+This service account needs to be created in the `eden-data-private` project.
 
 ```bash
 # Make sure eden-data-private configuration is activated
@@ -79,16 +79,17 @@ gcloud projects add-iam-policy-binding $public_project \
 
 ### Big Query
 
-The eden-data-public project houses relay data extracted from known providers. We perform the following steps here:
+The `eden-data-public` project houses relay data extracted from known providers. We perform the following steps here:
 
-- Create a mev-boost dataset in eden-data-private and eden-data-public
-- Create a slots-staging table in eden-data-private
-- Create a slots table in eden-data-public
+- Create a `flashbots` dataset in `eden-data-private` and `eden-data-public`
+- Create `mev-boost-staging` and `mev-boost-staging-archive` tables in `eden-data-private`
+- Create a `mev-boost` table in `eden-data-public`
 
 ```bash
 dataset_name='flashbots'
 table_name='mev_boost'
 table_name_staging='mev_boost_staging'
+table_name_staging_archive='mev_boost_staging_archive'
 
 # Activate eden-data-private configuration
 gcloud config configurations activate $private_project
@@ -114,6 +115,16 @@ else
         --table $dataset_name.$table_name_staging
 fi
 
+# Check if mev_boost_staging_archive table exists
+if bq ls $dataset_name | grep -q $table_name_staging_archive; then
+    echo "Table $dataset_name.$table_name_staging_archive already exists."
+else
+    # Create table
+    bq mk \
+        --schema ./sql/schema/mev_boost_staging_archive.json \
+        --table $dataset_name.$table_name_staging_archive
+fi
+
 # Get current dataset permissions and dump to file
 bq show \
     --format=prettyjson \
@@ -131,7 +142,6 @@ bq show \
 
 ```bash
 # Update the private flashbots dataset to include the new permissions:
-
 bq update \
     --source perms_flashbots_dataset_private.json \
     $private_project:$dataset_name
@@ -180,21 +190,19 @@ bq show \
 
 ```bash
 # Update the public flashbots dataset to include the new permissions:
-
 bq update \
     --source perms_flashbots_dataset_public.json \
     $public_project:$dataset_name
 ```
 
-### Cloud Run Task
+### Cloud Run Job
 
-The etl app will pull data from a list of relays via a cloud run task.
+The etl app will pull data from a list of relays via a cloud run job.
 
 ```bash
 etl_task_name=mev-boost-etl
 
 # Deploy cloud run task
-
 gcloud run deploy $etl_task_name \
     --source . \
     --service-account $mev_boost_svc_email \
@@ -206,21 +214,20 @@ gcloud run deploy $etl_task_name \
 
 ```bash
 # Get service uri
-
-sync_service_uri=`gcloud run tasks list --filter="metadata.name=$etl_task_name" --format="value(status.address.url)"`
+etl_task_uri=`gcloud run jobs list --filter="metadata.name=$etl_task_name" --uri`
 
 # Create schedule
-
-gcloud scheduler jobs create http flashbots-blocks-sync-hourly \
+etl_task_cron="mev-boost-etl-cron"
+gcloud scheduler jobs create http $etl_task_cron \
     --schedule "0 * * * *" \
-    --uri "$sync_service_uri/sync" \
+    --uri "$etl_task_uri/run" \
     --http-method POST \
     --location "us-central1" \
-    --oidc-service-account-email $readwrite_svc_email
+    --oidc-service-account-email $mev_boost_svc_email
 ```
 
 ### Scheduled Query
 
-Create a scheduled query to run every hour at half past. This will give enough time for the batch load into the staging table to complete. Once complete, the data can be moved from `flashbots.blocks_staging` to `flashbots.blocks` with the `block_timestamp` for paritioning.
+Create a scheduled query to run every hour at half past. This will give enough time for the etl job to complete. Once complete, the data can be moved from `flashbots.mev_boost_staging` to `flashbots.mev_boost` with the `block_timestamp` for paritioning and `reorged` populated.
 
-See `../sql/scheduled_queries/flashbots_etl_load.sql` for the script to use.
+See `ethereum-etl-relay-data/sql/scheduled_queries/mev_boost_transformation.sql` for the script to use.

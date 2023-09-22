@@ -1,11 +1,5 @@
 [
   {
-    "description": "Timestamp of block",
-    "mode": "REQUIRED",
-    "name": "block_timestamp",
-    "type": "TIMESTAMP"
-  },
-  {
     "description": "The relay that claimed the slot",
     "mode": "REQUIRED",
     "name": "relay",
@@ -76,11 +70,5 @@
     "mode": "REQUIRED",
     "name": "block_number",
     "type": "INTEGER"
-  },
-  {
-    "description": "Whether a block was reorged",
-    "mode": "REQUIRED",
-    "name": "reorged",
-    "type": "BOOLEAN"
   }
 ]
