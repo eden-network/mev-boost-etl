@@ -1,9 +1,16 @@
 import logging
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+dataset_id = os.getenv("DATASET_ID")
+table_id = os.getenv("TABLE_ID")
 
 def get_latest_slot(client):
-    query = ("SELECT MAX(slot) as latest_slot FROM `avalanche-304119.ethereum_mev_boost.mev_boost_staging`")
+    query = (f"SELECT MAX(slot) as latest_slot FROM `{dataset_id}.{table_id}`")
     try:
         logging.info("Getting latest slot from BigQuery")
         query_job = client.query(query)

@@ -1,0 +1,6 @@
+title: "relay-data-sync-agent"
+description: "Custom role for reading and writing to bigquery mev-boost dataset"
+stage: "ALPHA"
+includedPermissions:
+  - run.jobs.run
+  - run.routes.invoke

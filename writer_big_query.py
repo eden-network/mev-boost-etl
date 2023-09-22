@@ -3,16 +3,20 @@ import glob
 import sys
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
+from dotenv import load_dotenv
+import os
 
-def pushToBigQuery(client):
+load_dotenv()
+
+def push_to_big_query(client):
 
     # Define BQ dataset & table
-    dataset_id = 'ethereum_mev_boost'
-    table_id = 'mev_boost_staging'
+    dataset_id = os.getenv("DATASET_ID")
+    table_id_staging = os.getenv("TABLE_ID_STAGING")
 
     # Create a table reference
     try:
-        table_ref = client.dataset(dataset_id).table(table_id)
+        table_ref = client.dataset(dataset_id).table(table_id_staging)
     except Exception as e:
         logging.error(f"An error occurred while creating a table reference: {e}")
         sys.exit(1)
@@ -27,7 +31,7 @@ def pushToBigQuery(client):
 
     # Fetch all .ndjson files
     try:
-        json_files = glob.glob("relayData/*.ndjson")
+        json_files = glob.glob("data/*.ndjson")
     except Exception as e:
         logging.error(f"An error occurred while retrieving JSON files: {e}")
         sys.exit(1)
