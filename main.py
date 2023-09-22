@@ -49,7 +49,7 @@ logging.info("Starting relay data extraction")
 start_slot = get_latest_slot(public_client)
 if start_slot is None:
     sys.exit(1)
-logging.info(f"Parsing relay data from newest slot back to and including slot {startSlot}")
+logging.info(f"Parsing relay data from newest slot back to and including slot {start_slot}")
 
 # Function that gets relay data
 def get_relay_data(id, url, cursor, current_file_size, file_count):
