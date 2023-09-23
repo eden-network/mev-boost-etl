@@ -41,15 +41,16 @@ class TestFileOperations(unittest.TestCase):
             mock_log.assert_called_with("File old_file_path renamed to new_file_path")
 
     def test_correct_file_names(self):
+        test_pattern = "some_pattern"
         with patch('ndjson_file_operations.get_file_paths', return_value=["file_path1", "file_path2"]) as mock_get_file_paths, \
             patch('ndjson_file_operations.read_lines_from_file', side_effect=[[], ["line1", "line2"]]) as mock_read_lines, \
             patch('ndjson_file_operations.parse_json_from_lines', return_value=({"relay": "id1", "slot": 1}, {"relay": "id2", "slot": 2})) as mock_parse_json, \
             patch('ndjson_file_operations.delete_file') as mock_delete_file, \
             patch('ndjson_file_operations.rename_file') as mock_rename_file:
      
-            correct_file_names()
+            correct_file_names(test_pattern)
 
-            mock_get_file_paths.assert_called_with('relayData/*_*.ndjson')
+            mock_get_file_paths.assert_called_with(test_pattern)
             mock_read_lines.assert_has_calls([call("file_path1"), call("file_path2")])
             mock_delete_file.assert_called_once_with("file_path1")
             mock_rename_file.assert_called_once_with("file_path2", "relayData/id1_1-2.ndjson")

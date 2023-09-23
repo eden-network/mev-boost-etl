@@ -1,5 +1,4 @@
 import logging
-from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
 
 def get_latest_slot(client):
@@ -30,7 +29,7 @@ def get_latest_slot(client):
 
     row = rows[0]
     if row.latest_slot is None:
-        logging.error("The table is empty, initiated parsing from beginning")
+        logging.error("The table is empty, initiated parsing from beginning.")
         return 0
 
     if not isinstance(row.latest_slot, int):

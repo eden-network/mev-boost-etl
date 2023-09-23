@@ -1,12 +1,11 @@
 import sys
 import os
 import time
-import glob
 import logging
 from google.cloud import bigquery
 from reader_big_query import get_latest_slot
 from writer_big_query import push_to_BQ
-from ndjson_file_operations import correct_file_names
+from ndjson_file_operations import get_file_paths, correct_file_names
 from relay_data_functions import *
 
 # Setting up logging configuration & initializing BQ client
@@ -38,6 +37,9 @@ if startSlot is None:
     sys.exit(1)
 logging.info(f"Parsing relay data from newest slot back to and including slot {startSlot}")
 
+startSlot = 7388270 # REMOVE LATER, FOR TESTING PURPOSES
+
+# Parse relay data
 def get_relay_data(id, url, cursor, current_file_size, file_count):
     global startSlot
 
@@ -53,8 +55,15 @@ def get_relay_data(id, url, cursor, current_file_size, file_count):
     with open(f"relayData/{id}_{file_count}.ndjson", "a") as outfile:
         logging.info(f"Opening file for id: {id}")
 
-        # Loop through the data and write it to the file
+        # Loop through the data & write it to .ndjson file
         for slot in data:
+
+            # If slot number less than starting slot, stop parsing for this relay
+            if int(slot["slot"]) < startSlot:
+                logging.info(f"All new data for relay {id} has been parsed, moving on to the next relay")
+                outfile.close()
+                return "0", current_file_size, file_count
+
             error, current_file_size = process_individual_slot(id, outfile, slot, max_file_size, current_file_size)
 
             if error == "NEW_FILE":
@@ -69,11 +78,7 @@ def get_relay_data(id, url, cursor, current_file_size, file_count):
                 outfile = open(f"relayData/{id}_{file_count}.ndjson", "a")
                 
                 # Write the current slot to the new file
-                _, current_file_size = process_individual_slot(outfile, slot, max_file_size, current_file_size)
-
-            if int(slot["slot"]) < startSlot:
-                logging.info(f"All new data for relay {id} has been parsed, moving on to the next relay.")
-                return "0", current_file_size, file_count
+                _, current_file_size = process_individual_slot(id, outfile, slot, max_file_size, current_file_size)
 
     # Determine the next cursor based on the last slot in the data batch
     next_cursor = determine_next_cursor(data, startSlot)
@@ -81,7 +86,7 @@ def get_relay_data(id, url, cursor, current_file_size, file_count):
     logging.info(f"Next cursor value: {next_cursor}")
     return next_cursor, current_file_size, file_count
         
-# Function to update the relay data
+# Update relay data
 def relay_updater():
     global current_file_size
 
@@ -89,7 +94,7 @@ def relay_updater():
     success = True   
 
     # Remove all previous .ndjson files
-    files = glob.glob('relayData/*.ndjson')   
+    files = get_file_paths('relayData/*.ndjson')   
     for f in files:
         os.remove(f)
     
@@ -124,5 +129,5 @@ def relay_updater():
 
 # If parsing relay data was successful, modify file names and push data to BQ
 if relay_updater():
-    correct_file_names()
+    correct_file_names('relayData/*_*.ndjson')
     push_to_BQ(client)

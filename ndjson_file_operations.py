@@ -70,8 +70,8 @@ def rename_file(file_path, new_file_name):
         sys.exit(1)
 
 # Rename .ndjson files to include start & end slot numbers using the above functions
-def correct_file_names():
-    file_paths = get_file_paths('relayData/*_*.ndjson')
+def correct_file_names(pattern):
+    file_paths = get_file_paths(pattern)
 
     for file_path in file_paths:
         lines = read_lines_from_file(file_path)

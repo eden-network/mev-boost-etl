@@ -35,7 +35,7 @@ def push_to_BQ(client):
                     job_config=job_config,
                 )
             job.result()
-            logging.info(f"File {json_file} pushed to BQ")
+            logging.info(f"File {json_file} pushed to BQ.")
 
         except BadRequest as e:
             errors_occurred.append(f"Bad request error when pushing file {json_file} to BQ: {e}")
@@ -44,7 +44,7 @@ def push_to_BQ(client):
         except Exception as e:
             errors_occurred.append(f"An unexpected error occurred when pushing file {json_file} to BQ: {e}")
 
-    logging.info("Finished pushing data to BQ")
+    logging.info("Finished pushing data to BQ.")
     
     # Display all errors to see which data was not pushed to BQ
     if errors_occurred:
