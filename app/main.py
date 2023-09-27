@@ -15,7 +15,7 @@ project_id_public = os.getenv("PROJECT_ID_PUBLIC")
 project_id_private = os.getenv("PROJECT_ID_PRIVATE")
 
 # Setting up logging configuration
-logging.basicConfig(filename='progress.log', filemode='w', level=logging.INFO)
+logging.basicConfig(level=logging.INFO)
 
 # Import functions that get latest slot & push data to BQ
 from reader_big_query import get_latest_slot
@@ -26,8 +26,8 @@ public_client = bigquery.Client(project=project_id_public)
 private_client = bigquery.Client(project=project_id_private)
 
 # Batch size & rate limit
-batch_size = 100
-rate_limit_seconds = 1
+batch_size = int(os.getenv("BATCH_SIZE"))
+rate_limit_seconds = int(os.getenv("RATE_LIMIT_SECONDS"))
 
 # List of relay URLs and their respective IDs
 relays = [
@@ -71,6 +71,11 @@ def get_relay_data(id, url, cursor, current_file_size, file_count):
         x = requests.get(url)
         y = json.loads(x.text)
 
+        # If the response is empty, return "0" as the cursor to stop parsing data for this relay
+        if y == []:
+            logging.info(f"Relay {id} returned an empty array, moving on to the next relay")            
+            return "0",  current_file_size, file_count
+
         # Opening a file to store relay data (will be renamed at the end when slot numbers are known)
         outfile = open(f"data/{id}_{file_count}.ndjson", "a")
         logging.info(f"Opening file for id: {id}")
@@ -78,9 +83,9 @@ def get_relay_data(id, url, cursor, current_file_size, file_count):
         # Looping through the data and writing it to the file
         for slot in y:
             slot["relay"] = id
-
-            # If the current slot number is less than the latest parsed slot saved in BigQuery, stop parsing data for this relay
-            if int(slot["slot"]) < start_slot:
+            
+            # If the current slot number is less than the latest parsed slot saved in BigQuery OR slot == 0 (only occurs at the end of backload of agnostic data), stop parsing data for this relay
+            if int(slot["slot"]) < start_slot or int(slot["slot"]) == 0:
                 logging.info(f"All new data for relay {id} has been parsed, moving on to the next relay")
                 outfile.close()
                 return "0", current_file_size, file_count
@@ -115,7 +120,7 @@ def get_relay_data(id, url, cursor, current_file_size, file_count):
     # If an error occurs, terminate the script and do not push data to BigQuery
     except Exception as e:
         logging.error(f"An error occurred: {e}")
-        return "ERR"
+        return "ERR", None, None
 
 # Function to update the relay data
 def relay_updater():

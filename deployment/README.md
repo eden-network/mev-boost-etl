@@ -46,11 +46,11 @@ gcloud config configurations activate $private_project
 # Create service account
 mev_boost_svc_name='mev-boost-sync-agent'
 gcloud iam service-accounts create $mev_boost_svc_name \
-    --description="Service account with cloud run permissions and read/write access to mev_boost dataset in eden-data-private, read/write access to mev_boost dataset in eden-data-public" \
+    --description="Service account with cloud run permissions and read/write access to flashbots dataset in eden-data-private, read/write access to flashbots dataset in eden-data-public" \
     --display-name="$mev_boost_svc_name"
 
 # Create custom role
-mev_boost_sync_role='mev-boost-sync-role'
+mev_boost_sync_role='mev_boost_sync_role'
 gcloud iam roles create $mev_boost_sync_role \
     --project=$private_project \
     --file=./deployment/mev_boost_sync_role_private.yaml
@@ -95,7 +95,7 @@ table_name_staging_archive='mev_boost_staging_archive'
 gcloud config configurations activate $private_project
 
 # Check if flashbots dataset exists
-if bq ls -d $dataset_name; then
+if bq ls -d | grep -w "$dataset_name"; then
     echo "Dataset $dataset_name already exists."
 else
     # Create dataset
@@ -128,7 +128,7 @@ fi
 # Get current dataset permissions and dump to file
 bq show \
     --format=prettyjson \
-    $private_project:$dataset_name > perms_flashbots_dataset_private.json
+    $private_project:$dataset_name > ./permissions/flashbots_dataset_private.json
 
 # Add the following to the `access` section in `perms_flashbots_dataset_private.json` NOTE (make sure you change $mev_boost_svc_email variable with the actual value before pasting):
 ```
@@ -143,14 +143,14 @@ bq show \
 ```bash
 # Update the private flashbots dataset to include the new permissions:
 bq update \
-    --source perms_flashbots_dataset_private.json \
+    --source ./permissions/perms_flashbots_dataset_private.json \
     $private_project:$dataset_name
 
 # Activate eden-data-public configuration
 gcloud config configurations activate $public_project
 
 # Check if flashbots dataset exists
-if bq ls -d $dataset_name; then
+if bq ls -d | grep -w "$dataset_name"; then
     echo "Dataset $dataset_name already exists."
 else
     # Create dataset
@@ -169,14 +169,14 @@ else
         --schema ./sql/schema/mev_boost.json \
         --time_partitioning_field block_timestamp \
         --time_partitioning_type DAY \
-        --clustering_fields relay,builder_pub_key,slot \
+        --clustering_fields relay,builder_pubkey,slot \
         --table $dataset_name.$table_name
 fi
 
 # Get current dataset permissions and dump to file
 bq show \
     --format=prettyjson \
-    $public_project:$dataset_name > perms_flashbots_dataset_public.json
+    $public_project:$dataset_name > ./permissions/flashbots_dataset_public.json
 
 # Add the following to the `access` section in `perms_flashbots_dataset_public.json` NOTE (make sure you change $mev_boost_svc_email variable with the actual value before pasting):
 ```
@@ -191,7 +191,7 @@ bq show \
 ```bash
 # Update the public flashbots dataset to include the new permissions:
 bq update \
-    --source perms_flashbots_dataset_public.json \
+    --source ./permissions/flashbots_dataset_public.json \
     $public_project:$dataset_name
 ```
 
@@ -202,7 +202,7 @@ The etl app will pull data from a list of relays via a cloud run job.
 ```bash
 etl_task_name=mev-boost-etl
 
-# Deploy cloud run task
+# Deploy cloud run job
 gcloud run deploy $etl_task_name \
     --source . \
     --service-account $mev_boost_svc_email \

@@ -1,6 +1,7 @@
-title: "relay-data-sync-agent"
-description: "Custom role for relay data sync agent permissions"
+title: "Mev-Boost Sync Agent"
+description: "Custom role for mevboost sync agent permissions"
 stage: "ALPHA"
 includedPermissions:
   - run.jobs.run
   - run.routes.invoke
+  - bigquery.jobs.create
