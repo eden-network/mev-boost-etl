@@ -71,7 +71,7 @@ def rename_file(file_path, new_file_name):
 
 # Rename .ndjson files to include start & end slot numbers using the above functions
 def correct_file_names():
-    file_paths = get_file_paths('relayData/*_*.ndjson')
+    file_paths = get_file_paths('data/*_*.ndjson')
 
     for file_path in file_paths:
         lines = read_lines_from_file(file_path)
@@ -83,5 +83,5 @@ def correct_file_names():
             id = first_line["relay"]
             start_slot = first_line["slot"]
             end_slot = last_line["slot"]
-            new_file_name = f"relayData/{id}_{start_slot}-{end_slot}.ndjson"
+            new_file_name = f"data/{id}_{start_slot}-{end_slot}.ndjson"
             rename_file(file_path, new_file_name)
