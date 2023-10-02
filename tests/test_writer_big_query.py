@@ -1,7 +1,7 @@
 import glob
 import unittest
 from unittest.mock import Mock, MagicMock, patch
-from writer_big_query import push_to_big_query
+from app.writer_big_query import push_to_big_query
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
 
@@ -29,8 +29,8 @@ class TestPushToBigQuery(unittest.TestCase):
         logging_info_mock = MagicMock()
 
         with unittest.mock.patch('builtins.open', open_mock):
-            with unittest.mock.patch('writer_big_query.logging.info', logging_info_mock):
-                with unittest.mock.patch('writer_big_query.glob.glob', return_value=["data/dummy1.ndjson", "data/dummy2.ndjson"]):
+            with unittest.mock.patch('app.writer_big_query.logging.info', logging_info_mock):
+                with unittest.mock.patch('app.writer_big_query.glob.glob', return_value=["data/dummy1.ndjson", "data/dummy2.ndjson"]):
 
                     # Mocking the job instance to not actually perform any operations
                     mock_job = Mock()
@@ -59,7 +59,7 @@ class TestPushToBigQuery(unittest.TestCase):
         mock_client = Mock()
         mock_client.dataset.return_value.table.return_value = Mock()
 
-        with patch('writer_big_query.bigquery.LoadJobConfig', side_effect=Exception("Job config error")):
+        with patch('app.writer_big_query.bigquery.LoadJobConfig', side_effect=Exception("Job config error")):
             with self.assertRaises(SystemExit):
                 push_to_big_query(mock_client)
 
@@ -67,7 +67,7 @@ class TestPushToBigQuery(unittest.TestCase):
         mock_client = Mock()
         mock_client.dataset.return_value.table.return_value = Mock()
 
-        with patch('writer_big_query.glob.glob', side_effect=Exception("Glob error")):
+        with patch('app.writer_big_query.glob.glob', side_effect=Exception("Glob error")):
             with self.assertRaises(SystemExit):
                 push_to_big_query(mock_client)
 
@@ -78,10 +78,10 @@ class TestPushToBigQuery(unittest.TestCase):
         # Setting up a mock for logging.error
         logging_error_mock = MagicMock()
         
-        with patch('writer_big_query.logging.error', logging_error_mock):
+        with patch('app.writer_big_query.logging.error', logging_error_mock):
             mock_client.load_table_from_file.side_effect = BadRequest("Bad request error")
         
-            with patch('writer_big_query.glob.glob', return_value=["data/dummy1.ndjson"]):
+            with patch('app.writer_big_query.glob.glob', return_value=["data/dummy1.ndjson"]):
                 with patch('builtins.open', MagicMock(spec=open)):
                     push_to_big_query(mock_client)
                     
@@ -95,8 +95,8 @@ class TestPushToBigQuery(unittest.TestCase):
         
         logging_error_mock = MagicMock()
 
-        with patch('writer_big_query.logging.error', logging_error_mock):
-            with patch('writer_big_query.glob.glob', return_value=["data/dummy1.ndjson"]):
+        with patch('app.writer_big_query.logging.error', logging_error_mock):
+            with patch('app.writer_big_query.glob.glob', return_value=["data/dummy1.ndjson"]):
                 with patch('builtins.open', MagicMock(spec=open)):
                     push_to_big_query(mock_client)
 
@@ -109,8 +109,8 @@ class TestPushToBigQuery(unittest.TestCase):
 
         logging_error_mock = MagicMock()
 
-        with patch('writer_big_query.logging.error', logging_error_mock):
-            with patch('writer_big_query.glob.glob', return_value=["data/dummy1.ndjson"]):
+        with patch('app.writer_big_query.logging.error', logging_error_mock):
+            with patch('app.writer_big_query.glob.glob', return_value=["data/dummy1.ndjson"]):
                 with patch('builtins.open', MagicMock(spec=open)):
                     push_to_big_query(mock_client)
 
@@ -138,8 +138,8 @@ class TestPushToBigQuery(unittest.TestCase):
         ]
 
         with unittest.mock.patch('builtins.open', open_mock):
-            with unittest.mock.patch('writer_big_query.logging.error', logging_error_mock):
-                with unittest.mock.patch('writer_big_query.glob.glob', return_value=["data/dummy1.ndjson", "data/dummy2.ndjson"]):
+            with unittest.mock.patch('app.writer_big_query.logging.error', logging_error_mock):
+                with unittest.mock.patch('app.writer_big_query.glob.glob', return_value=["data/dummy1.ndjson", "data/dummy2.ndjson"]):
 
                     # Call the function
                     push_to_big_query(mock_client)

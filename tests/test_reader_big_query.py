@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import Mock
-from reader_big_query import get_latest_slot
+from app.reader_big_query import get_latest_slot
 from google.api_core.exceptions import BadRequest, Forbidden
 
 class TestGetLatestSlot(unittest.TestCase):
