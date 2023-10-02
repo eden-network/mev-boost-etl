@@ -1,9 +1,16 @@
 import logging
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+
+dataset_id = os.getenv("DATASET_ID")
+table_id = os.getenv("TABLE_ID")
 
 def get_latest_slot(client):
-    query = ("SELECT MAX(slot) as latest_slot FROM `avalanche-304119.ethereum_mev_boost.mev_boost_staging`")
+    query = (f"SELECT MAX(slot) as latest_slot FROM `{dataset_id}.{table_id}`")
     try:
         logging.info("Getting latest slot from BigQuery")
         query_job = client.query(query)
@@ -12,6 +19,7 @@ def get_latest_slot(client):
             return None
 
         results = query_job.result()
+
     except BadRequest as e:
         logging.error(f"Bad request error: {e}")
         return None
@@ -29,8 +37,8 @@ def get_latest_slot(client):
 
     row = rows[0]
     if row.latest_slot is None:
-        logging.error("Received a null value for latest_slot")
-        return None
+        logging.error("The table is empty, started parsing from beginning")
+        return 0
 
     if not isinstance(row.latest_slot, int):
         logging.error(f"Expected an integer value for latest_slot, got: {type(row.latest_slot)}")
