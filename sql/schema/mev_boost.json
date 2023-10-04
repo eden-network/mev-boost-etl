@@ -1,15 +1,15 @@
 [
   {
-    "description": "The relay that claimed the slot",
-    "mode": "REQUIRED",
-    "name": "relay",
-    "type": "STRING"
-  },
-  {
     "description": "Timestamp of block",
     "mode": "REQUIRED",
     "name": "block_timestamp",
     "type": "TIMESTAMP"
+  },
+  {
+    "description": "The relay that claimed the slot",
+    "mode": "REQUIRED",
+    "name": "relay",
+    "type": "STRING"
   },
   {
     "description": "Slot number",

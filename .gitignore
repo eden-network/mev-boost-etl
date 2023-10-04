@@ -173,6 +173,9 @@ celerybeat.pid
 
 # Environments
 .env
+.env.*
+!.env.sample
+!.env.sample.yaml
 .venv
 env/
 venv/
@@ -269,5 +272,5 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,macos,windows,linux
 
 # Custom ignores
-relayData/*.ndjson
+app/data/*.ndjson
 progress.log

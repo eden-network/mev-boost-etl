@@ -1,6 +1,6 @@
 import unittest
 from unittest.mock import patch, mock_open, call
-from ndjson_file_operations import *
+from file_operations import *
 
 class TestFileOperations(unittest.TestCase):
 
@@ -20,11 +20,11 @@ class TestFileOperations(unittest.TestCase):
             self.assertEqual(result, ["line1\n", "line2"])
 
     def test_delete_file(self):
-        with patch('ndjson_file_operations.os.remove') as mock_remove, patch('ndjson_file_operations.logging.info') as mock_log:
+        with patch('ndjson_file_operations.os.remove') as mock_remove, patch('ndjson_file_operations.logging.debug') as mock_log:
             delete_file("file_path")
 
             mock_remove.assert_called_with("file_path")
-            mock_log.assert_called_with("Removing file file_path")
+            mock_log.assert_called_with("removing file file_path")
 
     def test_parse_json_from_lines(self):
         lines = ['{"key": "value1"}', '{"key": "value2"}']
@@ -38,7 +38,7 @@ class TestFileOperations(unittest.TestCase):
             rename_file("old_file_path", "new_file_path")
 
             mock_rename.assert_called_with("old_file_path", "new_file_path")
-            mock_log.assert_called_with("File old_file_path renamed to new_file_path")
+            mock_log.assert_called_with("file old_file_path renamed to new_file_path")
 
     def test_correct_file_names(self):
         test_pattern = "some_pattern"
@@ -48,12 +48,12 @@ class TestFileOperations(unittest.TestCase):
             patch('ndjson_file_operations.delete_file') as mock_delete_file, \
             patch('ndjson_file_operations.rename_file') as mock_rename_file:
      
-            correct_file_names(test_pattern)
+            update_file_names(test_pattern)
 
             mock_get_file_paths.assert_called_with(test_pattern)
             mock_read_lines.assert_has_calls([call("file_path1"), call("file_path2")])
             mock_delete_file.assert_called_once_with("file_path1")
-            mock_rename_file.assert_called_once_with("file_path2", "relayData/id1_1-2.ndjson")
+            mock_rename_file.assert_called_once_with("file_path2", "data/id1_1-2.ndjson")
 
 if __name__ == '__main__':
     unittest.main()

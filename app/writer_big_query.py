@@ -1,15 +1,24 @@
 import logging
 import sys
+import glob
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
-from ndjson_file_operations import get_file_paths
+from dotenv import load_dotenv
+import os
 
-def push_to_BQ(client):
-    dataset_id = 'ethereum_mev_boost'
-    table_id = 'mev_boost_staging'
+load_dotenv()
+
+def push_to_big_query(client):
+    """
+    Connect to BigQuery and push all .ndjson files to the staging table.    
+    """
+
+    # Define BQ dataset & table
+    dataset_id = os.getenv("DATASET_ID")
+    table_id_staging = os.getenv("TABLE_ID_STAGING")
 
     try:
-        table_ref = client.dataset(dataset_id).table(table_id)
+        table_ref = client.dataset(dataset_id).table(table_id_staging)
     except Exception as e:
         logging.error(f"An error occurred while creating a table reference: {e}")
         sys.exit(1)
@@ -21,7 +30,14 @@ def push_to_BQ(client):
         logging.error(f"An error occurred while setting up job configuration: {e}")
         sys.exit(1)
 
-    json_files = get_file_paths('relayData/*_*-*.ndjson')
+    # Fetch all .ndjson files
+    try:
+        json_files = glob.glob("data/*.ndjson")
+    except Exception as e:
+        logging.error(f"An error occurred while retrieving JSON files: {e}")
+        sys.exit(1)
+    
+    # Create a list to store all the possible following errors for better visibility
     errors_occurred = []
 
     # Iterate through files and load data in batches, if an error occurs, log the error and try to push the next file

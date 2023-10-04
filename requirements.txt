@@ -1,3 +1,4 @@
+python-dotenv
 requests
 google-cloud-bigquery
 google-api-core

@@ -94,7 +94,7 @@ class TestProcessIndividualSlot(unittest.TestCase):
         max_file_size = 1000
         current_file_size = 0
 
-        error, new_file_size = process_individual_slot(id, mock_file, slot, max_file_size, current_file_size)
+        error, new_file_size = process_slot(id, mock_file, slot, max_file_size, current_file_size)
 
         self.assertIsNone(error)
         self.assertTrue(new_file_size > 0)
@@ -106,7 +106,7 @@ class TestProcessIndividualSlot(unittest.TestCase):
         max_file_size = 10
         current_file_size = 0
 
-        error, new_file_size = process_individual_slot(id, mock_file, slot, max_file_size, current_file_size)
+        error, new_file_size = process_slot(id, mock_file, slot, max_file_size, current_file_size)
 
         self.assertEqual(error, "NEW_FILE")
         self.assertEqual(new_file_size, 0)
@@ -138,18 +138,18 @@ class TestGetRelayData(unittest.TestCase):
         mock_fetch.return_value = (None, [{"slot": 10}, {"slot": 11}])
         
         cursor, current_file_size, file_count = get_relay_data(
-            id="eden",
+            relay="eden",
             url="http://example.com/api",
             cursor="latest",
             current_file_size=0,
             file_count=1,
-            startSlot=5
+            head_slot=5
         )
 
         self.assertEqual(cursor, "10")
         self.assertTrue(current_file_size > 0)
         self.assertEqual(file_count, 1)
-        mock_open.assert_called_with('relayData/eden_1.ndjson', 'a')
+        mock_open.assert_called_with('data/eden_1.ndjson', 'a')
 
     @patch('relay_data_functions.fetch_data_from_url')
     @patch('builtins.open', new_callable=unittest.mock.mock_open)
@@ -157,12 +157,12 @@ class TestGetRelayData(unittest.TestCase):
         mock_fetch.return_value = ("ERR", [])
         
         cursor = get_relay_data(
-            id="eden",
+            relay="eden",
             url="http://example.com/api",
             cursor="latest",
             current_file_size=0,
             file_count=1,
-            startSlot=5
+            head_slot=5
         )
         
         self.assertEqual(cursor, "ERR")
@@ -173,12 +173,12 @@ class TestGetRelayData(unittest.TestCase):
         mock_fetch.return_value = (None, [{"slot": 2}, {"slot": 3}])
         
         cursor, current_file_size, file_count = get_relay_data(
-            id="eden",
+            relay="eden",
             url="http://example.com/api",
             cursor="latest",
             current_file_size=0,
             file_count=1,
-            startSlot=3
+            head_slot=3
         )
         
         self.assertEqual(cursor, "0")
@@ -198,7 +198,7 @@ class TestProcessSingleRelay(unittest.TestCase):
         ]
         
         relay = {"id": "eden", "url": "http://example.com/api"}
-        result = process_single_relay(relay, startSlot=5, rateLimitSeconds=1)
+        result = process_relay(relay, head_slot=5, rate_limit_seconds=1)
         
         self.assertTrue(result)
         mock_sleep.assert_called_with(1)
@@ -209,7 +209,7 @@ class TestProcessSingleRelay(unittest.TestCase):
         mock_get_relay_data.return_value = ("ERR", 0, 1)
         
         relay = {"id": "eden", "url": "http://example.com/api"}
-        result = process_single_relay(relay, startSlot=5, rateLimitSeconds=1)
+        result = process_relay(relay, head_slot=5, rate_limit_seconds=1)
         
         self.assertFalse(result)
         mock_sleep.assert_called_with(1)
@@ -217,27 +217,27 @@ class TestProcessSingleRelay(unittest.TestCase):
 
 class TestRelayUpdater(unittest.TestCase):
 
-    @patch('relay_data_functions.process_single_relay')
+    @patch('relay_data_functions.process_relay')
     @patch('relay_data_functions.get_file_paths')
     @patch('relay_data_functions.delete_file')
     def test_all_relays_successful(self, mock_delete_file, mock_get_file_paths, mock_process_single_relay):
         mock_get_file_paths.return_value = ["file1", "file2"]
         mock_process_single_relay.return_value = True
 
-        result = relay_updater(startSlot=5, rateLimitSeconds=1, relays=[{"id": "Eden"}, {"id": "Manifold"}])
+        result = extract_data(start_slot=5, rate_limit_seconds=1, relays=[{"id": "Eden"}, {"id": "Manifold"}])
         
         self.assertTrue(result)
         mock_delete_file.assert_called()
         mock_process_single_relay.assert_called()
 
-    @patch('relay_data_functions.process_single_relay')
+    @patch('relay_data_functions.process_relay')
     @patch('relay_data_functions.get_file_paths')
     @patch('relay_data_functions.delete_file')
     def test_error_in_one_relay(self, mock_delete_file, mock_get_file_paths, mock_process_single_relay):
         mock_get_file_paths.return_value = ["file1", "file2"]
         mock_process_single_relay.side_effect = [True, False]
 
-        result = relay_updater(startSlot=5, rateLimitSeconds=1, relays=[{"id": "Eden"}, {"id": "Manifold"}])
+        result = extract_data(start_slot=5, rate_limit_seconds=1, relays=[{"id": "Eden"}, {"id": "Manifold"}])
         
         self.assertFalse(result)
         mock_delete_file.assert_called()
