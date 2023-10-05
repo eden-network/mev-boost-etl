@@ -220,22 +220,17 @@ bq update \
 
 ### Cloud Run Job
 
-The etl app will pull data from a list of relays via a cloud run job.
+The etl app will pull data from a list of relays via a cloud run job. To create the cloud run job, we need to create a docker image and push it to the google cloud container registry using:
 
 ```bash
-etl_task_name=mev-boost-etl
-
-# Deploy cloud run job
-gcloud run deploy $etl_task_name \
-    --source . \
-    --service-account $mev_boost_svc_email \
-    --env-vars-file ./.env.production.yaml \
-    --no-allow-unauthenticated
+gcloud builds submit --config cloudbuild.production.yaml .
 ```
 
 ### Cloud Schedule
 
 ```bash
+etl_task_name='mev-boost-etl'
+
 # Get service uri
 etl_task_uri=`gcloud run jobs list --filter="metadata.name=$etl_task_name" --uri`
 

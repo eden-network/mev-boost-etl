@@ -93,9 +93,8 @@ def get_relay_data(relay, url, batch_size, cursor, current_file_size, file_count
     max_file_size = 15 * 1024 * 1024  # Max file size is 15 MB
     error, data = fetch_data_from_url(url, batch_size, cursor)
 
-    if error == "ERR":
-        logging.error("an error occurred while fetching data.")
-        return "ERR"
+    if error == "ERR":        
+        return "ERR", None, None
     logging.info(f"relay {relay} fetched {len(data)} slots")
     
     with open(f"data/{relay}_{file_count}.ndjson", "a") as outfile:

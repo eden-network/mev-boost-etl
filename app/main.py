@@ -34,6 +34,7 @@ def execute():
     reset_local_storage()
     
     successful_relays = []
+    unsuccessful_relays = []
     for row in relay_metadata:
         success = True
         success = process_relay(row['relay'], row['url'], row['batch_size'], row['head_slot'], row['tail_slot'], row['back_fill'])
@@ -41,6 +42,7 @@ def execute():
             successful_relays.append(row['relay'])
             logging.info(f"relay {row['relay']} processed successfully")
         else:
+            unsuccessful_relays.append(row['relay'])
             logging.error(f"relay {row['relay']} processing failed")        
 
     if len(successful_relays) > 0:
@@ -49,7 +51,10 @@ def execute():
         push_to_big_query(private_client)
     else:
         logging.error("no relays were processed successfully, exiting")
+        sys.exit(1)
 
+    if len(unsuccessful_relays) > 0:
+        logging.error(f"{len(unsuccessful_relays)} relays failed to process, see error logs for details")
 
 if __name__ == '__main__':
     execute()

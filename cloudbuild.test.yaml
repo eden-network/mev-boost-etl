@@ -1,0 +1,13 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/enduring-art-304119/mev-boost-etl",
+        "-f",
+        "./Dockerfile.production",
+        ".",
+      ]
+images:
+  - "gcr.io/enduring-art-304119/mev-boost-etl"

@@ -108,7 +108,7 @@ def reset_local_storage():
     """
     Remove all .ndjson files from the data directory.    
     """
-    logging.debug("resetting local storage")
+    logging.info("resetting local storage")
     files = get_file_paths('data/*.ndjson')
     logging.debug(f"found {len(files)} files to remove")
     for file in files:

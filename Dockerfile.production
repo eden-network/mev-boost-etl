@@ -5,13 +5,14 @@ FROM python:3.11-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV PROJECT_ID_PRIVATE "enduring-art-207419"
-ENV PROJECT_ID_PUBLIC "avalanche-304119"
+ENV PROJECT_ID_PRIVATE "eden-data-private"
+ENV PROJECT_ID_PUBLIC "eden-data-public"
 ENV DATASET_ID "flashbots"
 ENV TABLE_ID "mev_boost"
 ENV TABLE_ID_STAGING "mev_boost_staging"
-ENV BATCH_SIZE 100
+ENV METADATA_VIEW_ID "mev_boost_metadata"
 ENV RATE_LIMIT_SECONDS 2
+ENV LOGGING_LEVEL "INFO"
 
 # Set the working directory inside the container
 WORKDIR /app
