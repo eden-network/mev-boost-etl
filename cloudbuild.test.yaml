@@ -6,7 +6,7 @@ steps:
         "-t",
         "gcr.io/enduring-art-304119/mev-boost-etl",
         "-f",
-        "./Dockerfile.production",
+        "./Dockerfile.test",
         ".",
       ]
 images:
