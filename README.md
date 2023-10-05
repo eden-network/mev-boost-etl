@@ -1,2 +1,2 @@
-# ethereum-etl-relay-data
+# MEV Boost ETL
 
