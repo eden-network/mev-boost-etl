@@ -6,7 +6,7 @@
     },
     {
       "role": "WRITER",
-      "userByEmail": "mev-boost-sync-agent@enduring-art-207419.iam.gserviceaccount.com"
+      "userByEmail": "mev-boost-sync-agent@eden-data-private.iam.gserviceaccount.com"
     },
     {
       "role": "OWNER",
@@ -21,17 +21,17 @@
       "specialGroup": "projectReaders"
     }
   ],
-  "creationTime": "1695652227534",
+  "creationTime": "1696418933938",
   "datasetReference": {
     "datasetId": "flashbots",
-    "projectId": "avalanche-304119"
+    "projectId": "eden-data-public"
   },
   "description": "Dataset for housing mev-boost data",
-  "etag": "FGMbfWOjxRmYb3Z7iIC6LA==",
-  "id": "avalanche-304119:flashbots",
+  "etag": "mVB6prHbtn3wNsn4K5quVg==",
+  "id": "eden-data-public:flashbots",
   "kind": "bigquery#dataset",
-  "lastModifiedTime": "1695652382023",
+  "lastModifiedTime": "1696419631120",
   "location": "US",
-  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/avalanche-304119/datasets/flashbots",
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/eden-data-public/datasets/flashbots",
   "type": "DEFAULT"
 }

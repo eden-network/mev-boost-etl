@@ -88,6 +88,7 @@ The `eden-data-public` project houses relay data extracted from known providers.
 ```bash
 dataset_name='flashbots'
 table_name='mev_boost'
+table_name_config='mev_boost_config'
 table_name_staging='mev_boost_staging'
 table_name_staging_archive='mev_boost_staging_archive'
 
@@ -103,6 +104,16 @@ else
         --location "US" \
         --description "Dataset for housing mev-boost staging data" \
         $dataset_name
+fi
+
+# Check if mev_boost_config table exists
+if bq ls $dataset_name | grep -q $table_name_config; then
+    echo "Table $dataset_name.$table_name_config already exists."
+else
+    # Create table
+    bq mk \
+        --schema ./sql/schema/mev_boost_config.json \
+        --table $dataset_name.$table_name_config
 fi
 
 # Check if mev_boost_staging table exists
@@ -125,6 +136,9 @@ else
         --table $dataset_name.$table_name_staging_archive
 fi
 
+# Sedd mev_boost_config table
+bq query --use_legacy_sql=false "$(cat ./sql/scripts/seed_mev_boost_config.sql)"
+
 # Get current dataset permissions and dump to file
 bq show \
     --format=prettyjson \
@@ -143,7 +157,7 @@ bq show \
 ```bash
 # Update the private flashbots dataset to include the new permissions:
 bq update \
-    --source ./permissions/perms_flashbots_dataset_private.json \
+    --source ./permissions/flashbots_dataset_private.json \
     $private_project:$dataset_name
 
 # Activate eden-data-public configuration
@@ -173,6 +187,15 @@ else
         --table $dataset_name.$table_name
 fi
 
+# Switch back to the private project to create the metadata view
+gcloud config configurations activate $private_project
+
+# Create mev_boost_metadata view
+bq query --use_legacy_sql=false "$(cat ./sql/views/mev_boost_metadata.sql)"
+
+# Switch back to the public project
+gcloud config configurations activate $public_project
+
 # Get current dataset permissions and dump to file
 bq show \
     --format=prettyjson \
@@ -197,22 +220,17 @@ bq update \
 
 ### Cloud Run Job
 
-The etl app will pull data from a list of relays via a cloud run job.
+The etl app will pull data from a list of relays via a cloud run job. To create the cloud run job, we need to create a docker image and push it to the google cloud container registry using:
 
 ```bash
-etl_task_name=mev-boost-etl
-
-# Deploy cloud run job
-gcloud run deploy $etl_task_name \
-    --source . \
-    --service-account $mev_boost_svc_email \
-    --env-vars-file ./.env.production.yaml \
-    --no-allow-unauthenticated
+gcloud builds submit --config cloudbuild.production.yaml .
 ```
 
 ### Cloud Schedule
 
 ```bash
+etl_task_name='mev-boost-etl'
+
 # Get service uri
 etl_task_uri=`gcloud run jobs list --filter="metadata.name=$etl_task_name" --uri`
 
@@ -220,7 +238,7 @@ etl_task_uri=`gcloud run jobs list --filter="metadata.name=$etl_task_name" --uri
 etl_task_cron="mev-boost-etl-cron"
 gcloud scheduler jobs create http $etl_task_cron \
     --schedule "0 * * * *" \
-    --uri "$etl_task_uri/run" \
+    --uri $etl_task_uri:run \
     --http-method POST \
     --location "us-central1" \
     --oidc-service-account-email $mev_boost_svc_email

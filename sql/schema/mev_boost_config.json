@@ -1,0 +1,32 @@
+[
+  {
+    "description": "the relay name/id",
+    "mode": "REQUIRED",
+    "name": "relay",
+    "type": "STRING"
+  },
+  {
+    "description": "the relay url",
+    "mode": "REQUIRED",
+    "name": "url",
+    "type": "STRING"
+  },
+  {
+    "description": "the number of slots the relay api supports",
+    "mode": "REQUIRED",
+    "name": "batch_size",
+    "type": "INTEGER"
+  },
+  {
+    "description": "whether we should extract data from this relay",
+    "mode": "REQUIRED",
+    "name": "active",
+    "type": "BOOLEAN"
+  },
+  {
+    "description": "whether we should backfill data for this relay",
+    "mode": "REQUIRED",
+    "name": "back_fill",
+    "type": "BOOLEAN"
+  }
+]

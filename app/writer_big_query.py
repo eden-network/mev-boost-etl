@@ -1,6 +1,6 @@
 import logging
-import glob
 import sys
+import glob
 from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
 from dotenv import load_dotenv
@@ -9,19 +9,20 @@ import os
 load_dotenv()
 
 def push_to_big_query(client):
+    """
+    Connect to BigQuery and push all .ndjson files to the staging table.    
+    """
 
     # Define BQ dataset & table
     dataset_id = os.getenv("DATASET_ID")
     table_id_staging = os.getenv("TABLE_ID_STAGING")
 
-    # Create a table reference
     try:
         table_ref = client.dataset(dataset_id).table(table_id_staging)
     except Exception as e:
         logging.error(f"An error occurred while creating a table reference: {e}")
         sys.exit(1)
 
-    # Define job configuration
     try:
         job_config = bigquery.LoadJobConfig()
         job_config.source_format = bigquery.SourceFormat.NEWLINE_DELIMITED_JSON
@@ -39,7 +40,7 @@ def push_to_big_query(client):
     # Create a list to store all the possible following errors for better visibility
     errors_occurred = []
 
-    # Iterate through files and load data in batches, if an error occurs log the error and try to push the next file, at the end display the list of all files (which will contain relay name & starting/ending slot numbers) that failed
+    # Iterate through files and load data in batches, if an error occurs, log the error and try to push the next file
     for json_file in json_files: 
         try:
             with open(json_file, 'rb') as source_file:
@@ -50,7 +51,7 @@ def push_to_big_query(client):
                     job_config=job_config,
                 )
             job.result()
-            logging.info(f"File {json_file} pushed to BQ")
+            logging.info(f"File {json_file} pushed to BQ.")
 
         except BadRequest as e:
             errors_occurred.append(f"Bad request error when pushing file {json_file} to BQ: {e}")
@@ -59,10 +60,10 @@ def push_to_big_query(client):
         except Exception as e:
             errors_occurred.append(f"An unexpected error occurred when pushing file {json_file} to BQ: {e}")
 
-    logging.info("Data successfully pushed to BQ")
+    logging.info("Finished pushing data to BQ.")
     
     # Display all errors to see which data was not pushed to BQ
     if errors_occurred:
-        logging.error("The following errors occurred during the process:")
+        logging.error("The following errors occurred during the process of pushing data to BQ:")
         for error in errors_occurred:
             logging.error(error)

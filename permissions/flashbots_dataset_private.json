@@ -2,15 +2,11 @@
   "access": [
     {
       "role": "WRITER",
+      "userByEmail": "mev-boost-sync-agent@eden-data-private.iam.gserviceaccount.com"
+    },
+    {
+      "role": "WRITER",
       "specialGroup": "projectWriters"
-    },
-    {
-      "role": "WRITER",
-      "userByEmail": "flashbots-sync-agent@enduring-art-207419.iam.gserviceaccount.com"
-    },
-    {
-      "role": "WRITER",
-      "userByEmail": "mev-boost-sync-agent@enduring-art-207419.iam.gserviceaccount.com"
     },
     {
       "role": "OWNER",
@@ -23,23 +19,19 @@
     {
       "role": "READER",
       "specialGroup": "projectReaders"
-    },
-    {
-      "role": "READER",
-      "userByEmail": "si040368319@gmail.com"
     }
   ],
-  "creationTime": "1674656034743",
+  "creationTime": "1696412099637",
   "datasetReference": {
     "datasetId": "flashbots",
-    "projectId": "enduring-art-207419"
+    "projectId": "eden-data-private"
   },
-  "description": "Dataset for housing all things Flashbots",
-  "etag": "hE6AqDYaU9tZBPOCgvTSsw==",
-  "id": "enduring-art-207419:flashbots",
+  "description": "Dataset for housing mev-boost staging data",
+  "etag": "z6cVv28zFMTejWrWfM8HqQ==",
+  "id": "eden-data-private:flashbots",
   "kind": "bigquery#dataset",
-  "lastModifiedTime": "1695651735923",
+  "lastModifiedTime": "1696412099637",
   "location": "US",
-  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/enduring-art-207419/datasets/flashbots",
+  "selfLink": "https://bigquery.googleapis.com/bigquery/v2/projects/eden-data-private/datasets/flashbots",
   "type": "DEFAULT"
 }
