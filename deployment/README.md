@@ -238,7 +238,7 @@ etl_task_uri=`gcloud run jobs list --filter="metadata.name=$etl_task_name" --uri
 etl_task_cron="mev-boost-etl-cron"
 gcloud scheduler jobs create http $etl_task_cron \
     --schedule "0 * * * *" \
-    --uri "$etl_task_uri/run" \
+    --uri $etl_task_uri:run \
     --http-method POST \
     --location "us-central1" \
     --oidc-service-account-email $mev_boost_svc_email
