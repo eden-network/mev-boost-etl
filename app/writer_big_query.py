@@ -1,22 +1,54 @@
 import logging
 import sys
 import glob
-from google.cloud import bigquery
+from google.cloud.bigquery import Client, LoadJobConfig, SourceFormat
 from google.api_core.exceptions import BadRequest, Forbidden
 from dotenv import load_dotenv
-import os
+from os import getenv
+from io import BytesIO
 
 load_dotenv()
+
+dataset_id = getenv("DATASET_ID")
+table_id_blocks_received_staging = getenv("BLOCKS_RECEIVED_TABLE_ID")
+table_id_staging = getenv("TABLE_ID_STAGING")
+
+def push_builder_blocks_received_to_big_query(client: Client, gzip_file_bytes: bytes, relay: str) -> bool:
+    """
+    Uploads gzip bytes to BigQuery.
+    """
+    logging.info(f"uploading gzip bytes for {relay} to bigquery")
+    try:
+        table_ref = client.dataset(dataset_id).table(table_id_blocks_received_staging)
+        job_config = LoadJobConfig()
+        job_config.source_format = SourceFormat.NEWLINE_DELIMITED_JSON
+        
+        with BytesIO(gzip_file_bytes) as gzip_file_stream:
+            job = client.load_table_from_file(
+                gzip_file_stream,
+                table_ref,
+                location='US',
+                job_config=job_config,
+            )
+        job.result()
+        logging.info(f"gzip for {relay} uploaded to bigquery")
+
+    except BadRequest as e:
+        logging.error(f"bad request error when uploading bytes for {relay} to bigquery: {e}")
+        return False
+    except Forbidden as e:
+        logging.error(f"forbidden error when uploading for {relay} to bigquery: {e}")
+        return False
+    except Exception as e:
+        logging.error(f"unexpected error occurred when uploading for {relay} to bigquery: {e}")
+        return False    
+
+    return True
 
 def push_to_big_query(client):
     """
     Connect to BigQuery and push all .ndjson files to the staging table.    
-    """
-
-    # Define BQ dataset & table
-    dataset_id = os.getenv("DATASET_ID")
-    table_id_staging = os.getenv("TABLE_ID_STAGING")
-
+    """        
     try:
         table_ref = client.dataset(dataset_id).table(table_id_staging)
     except Exception as e:
@@ -24,8 +56,8 @@ def push_to_big_query(client):
         sys.exit(1)
 
     try:
-        job_config = bigquery.LoadJobConfig()
-        job_config.source_format = bigquery.SourceFormat.NEWLINE_DELIMITED_JSON
+        job_config = LoadJobConfig()
+        job_config.source_format = SourceFormat.NEWLINE_DELIMITED_JSON
     except Exception as e:
         logging.error(f"An error occurred while setting up job configuration: {e}")
         sys.exit(1)
