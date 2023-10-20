@@ -17,9 +17,9 @@ def transform_bytes(bytes: bytes, relay: str, slot: date) -> bytes | None:
             milliseconds = timestamp_millis % 1000
             timestamp_str = datetime.utcfromtimestamp(timestamp_secs).strftime('%Y-%m-%d %H:%M:%S') + f".{milliseconds:03}000"
                         
-            obj['timestamp_s'] = timestamp_secs
+            obj['timestamp_s'] = obj.get('timestamp')
             obj['timestamp'] = timestamp_str 
-            obj['relay'] = relay        
+            obj['relay'] = relay
             
             transformed_line = json.dumps(obj)
             transformed_lines.append(transformed_line)

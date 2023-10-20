@@ -42,23 +42,11 @@ The `eden-data-public` project houses relay data extracted from known providers.
 - Create a `blocks_received` table in `eden-data-public`
 
 ```bash
-dataset_name='flashbots'
-table_name='blocks_received'
-table_name_staging='blocks_received_staging'
-table_name_staging_archive='blocks_received_staging_archive'
-
 # Activate eden-data-private configuration
 gcloud config configurations activate $private_project
 
-# Check if blocks_received_staging table exists
-if bq ls $dataset_name | grep -q $table_name_staging; then
-    echo "Table $dataset_name.$table_name_staging already exists."
-else
-    # Create table
-    bq mk \
-        --schema ./sql/schema/blocks_received_staging.json \
-        --table $dataset_name.$table_name_staging
-fi
+# Create kline_1s_config table:
+bq query --use_legacy_sql=false --project_id=$private_project_id < ./sql/schema/blocks_received.sql
 
 # Check if blocks_received_staging_archive table exists
 if bq ls $dataset_name | grep -q $table_name_staging_archive; then

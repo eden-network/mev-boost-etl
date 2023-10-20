@@ -1,4 +1,4 @@
-create table flashbots.blocks_received_staging (
+create table flashbots.blocks_received (
     block_timestamp timestamp not null options(description='timestamp of block'),
     relay string not null options(description='the relay that receveived the block'),
     slot integer not null options(description='slot number'),

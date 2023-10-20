@@ -7,7 +7,7 @@ class TestTryDownloadZip(unittest.TestCase):
 
     def test_transform_and_check_csv_on_disk(self):
         relay = "flashbots"
-        slot = "7567002"
+        slot = "7567001"
         with open(f"./data/builder_block_received/{relay}-{slot}.json", "rb") as file_stream:
             json_bytes = file_stream.read()
             transformed_json_bytes = transform_bytes(json_bytes, "flashbots", "7567001")
