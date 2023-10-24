@@ -4,7 +4,7 @@ import logging
 from google.cloud.bigquery import Client
 from dotenv import load_dotenv
 from api_reader import download_builder_blocks_received, async_download_builder_blocks_received
-from json_bytes_transformer import transform_bytes, gzip_bytes
+from json_bytes_transformer import transform_bytes, gzip_bytes, async_transform_bytes, async_gzip_bytes
 from writer_big_query import push_builder_blocks_received_to_big_query, async_push_builder_blocks_received_to_big_query
 from time import sleep
 
@@ -28,8 +28,8 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> boo
     number_of_slots = 1000
     total_bytes = b''
 
-    async def upload_data(client, relay, data: bytes) -> bool:
-        gzipped_bytes = gzip_bytes(data)
+    async def async_upload_data(client, relay, data: bytes) -> bool:
+        gzipped_bytes = await async_gzip_bytes(data)
         if gzipped_bytes is None:
             return False
 
@@ -45,13 +45,13 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> boo
                 await asyncio.sleep(rate_limit)
                 continue
 
-            transformed_json_bytes = transform_bytes(json_bytes, relay, current_slot)
+            transformed_json_bytes = await async_transform_bytes(json_bytes, relay, current_slot)
             if transformed_json_bytes is None:
                 await asyncio.sleep(rate_limit)
                 continue
 
             if should_upload(total_bytes, transformed_json_bytes):
-                if not await upload_data(private_client, relay, total_bytes):
+                if not await async_upload_data(private_client, relay, total_bytes):
                     logging.error(f"failed to upload bytes for {relay} to bigquery")
                     return False
                 total_bytes = transformed_json_bytes
@@ -60,7 +60,7 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> boo
 
             await asyncio.sleep(rate_limit)
 
-        if len(total_bytes) > 0 and not await upload_data(private_client, relay, total_bytes):
+        if len(total_bytes) > 0 and not await async_upload_data(private_client, relay, total_bytes):
             logging.error(f"failed to upload last bytes for {relay} to bigquery")
             return False
 
