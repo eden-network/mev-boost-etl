@@ -1,3 +1,4 @@
+import asyncio
 import logging
 import sys
 import glob
@@ -12,6 +13,16 @@ load_dotenv()
 dataset_id = getenv("DATASET_ID")
 table_id_blocks_received_staging = getenv("BLOCKS_RECEIVED_TABLE_ID_STAGING")
 table_id_staging = getenv("TABLE_ID_STAGING")
+
+async def async_push_builder_blocks_received_to_big_query(client, gzip_file_bytes, relay):
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(
+        None,
+        push_builder_blocks_received_to_big_query,
+        client,
+        gzip_file_bytes,
+        relay
+    )
 
 def push_builder_blocks_received_to_big_query(client: Client, gzip_file_bytes: bytes, relay: str) -> bool:
     """

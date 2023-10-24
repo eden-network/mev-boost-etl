@@ -14,5 +14,5 @@ create table flashbots.blocks_received_staging (
     timestamp timestamp not null options(description='timestamp block received'),
     timestamp_s integer not null options(description='timestamp in seconds when block received'),
     timestamp_ms integer not null options(description='timestamp in ms when block received'),
-    optimistic_submission boolean not null options(description='whether block submitted was configured as optimistic')
+    optimistic_submission boolean options(description='whether block submitted was configured as optimistic')
 );

@@ -1,8 +1,25 @@
+import asyncio
 import json
 import logging
 from datetime import datetime, date
 from io import BytesIO
 from gzip import GzipFile
+
+async def async_transform_bytes(input_bytes: bytes, relay: str, slot: date) -> bytes | None:
+    return await asyncio.get_running_loop().run_in_executor(
+        None, 
+        transform_bytes, 
+        input_bytes, 
+        relay, 
+        slot
+    )
+
+async def async_gzip_bytes(input_bytes: bytes) -> bytes | None:
+    return await asyncio.get_running_loop().run_in_executor(
+        None, 
+        gzip_bytes, 
+        input_bytes
+    )
 
 def transform_bytes(input_bytes: bytes, relay: str, slot: date) -> bytes | None:
     """
@@ -36,7 +53,7 @@ def transform_bytes(input_bytes: bytes, relay: str, slot: date) -> bytes | None:
         logging.error(f"an error occurred while processing json bytes for {relay} {slot}: {str(e)}")
         return None
     
-def gzip(input_bytes: bytes) -> bytes | None:
+def gzip_bytes(input_bytes: bytes) -> bytes | None:
     """
     Gzips bytes.
     """
