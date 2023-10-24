@@ -10,7 +10,7 @@ from io import BytesIO
 load_dotenv()
 
 dataset_id = getenv("DATASET_ID")
-table_id_blocks_received_staging = getenv("BLOCKS_RECEIVED_TABLE_ID")
+table_id_blocks_received_staging = getenv("BLOCKS_RECEIVED_TABLE_ID_STAGING")
 table_id_staging = getenv("TABLE_ID_STAGING")
 
 def push_builder_blocks_received_to_big_query(client: Client, gzip_file_bytes: bytes, relay: str) -> bool:
