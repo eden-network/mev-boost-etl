@@ -81,6 +81,17 @@ gcloud config configurations activate $private_project
 bq query --use_legacy_sql=false "$(cat ./sql/views/blocks_received_metadata.sql)"
 ```
 
+### Backload kubernetes cluster multi-node
+
+```bash
+# update the mev-boost-sync-agent service account with the iam.serviceAccountTokenCreator role so that it can be used to authenticate with the kubernetes cluster
+gcloud iam service-accounts add-iam-policy-binding \
+  --role roles/iam.serviceAccountTokenCreator \
+  --member "serviceAccount:mev-boost-sync-agent@enduring-art-207419.iam.gserviceaccount.com" \
+  mev-boost-sync-agent@enduring-art-207419.iam.gserviceaccount.com
+
+```
+
 <!-- ### Cloud Run Job
 
 The etl app will pull data from a list of relays via a cloud run job. To create the cloud run job, we need to create a docker image and push it to the google cloud container registry using:

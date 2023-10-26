@@ -24,8 +24,8 @@ def should_upload(total_bytes: bytes, transformed_json_bytes: bytes) -> bool:
 async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> bool:
     logging.info(f"processing relay {relay}")
     private_client = Client(project=project_id_private)
-    start_slot = 7566615
-    number_of_slots = 1000
+    start_slot = 7565615
+    number_of_slots = 100
     total_bytes = b''
 
     async def async_upload_data(client, relay, data: bytes) -> bool:
@@ -145,7 +145,7 @@ async def async_execute():
     relay_metadata = [
         {'base_url': "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "agnostic", 'rate_limit': 2},
         {'base_url': "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "bloxrouteRegulated", 'rate_limit': 2},
-        # {'base_url': "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "aestus", 'rate_limit': 2},
+        {'base_url': "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "aestus", 'rate_limit': 2},
         {'base_url': "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "manifold", 'rate_limit': 2},
         {'base_url': "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "bloxrouteMaxProfit", 'rate_limit': 2},
         {'base_url': "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received", 'relay': "eden", 'rate_limit': 2},
