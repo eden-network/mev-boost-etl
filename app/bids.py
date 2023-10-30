@@ -2,10 +2,12 @@ import asyncio
 from os import getenv
 import logging
 from google.cloud.bigquery import Client
+from google.cloud import storage
 from dotenv import load_dotenv
-from api_reader import download_builder_blocks_received, async_download_builder_blocks_received
+from api_reader import download_bids, async_download_bids
 from json_bytes_transformer import transform_bytes, gzip_bytes, async_transform_bytes, async_gzip_bytes
-from writer_big_query import push_builder_blocks_received_to_big_query, async_push_builder_blocks_received_to_big_query
+from writer_big_query import push_bids_to_big_query
+from writer_cloud_storage import async_push_bids_to_gcs
 from time import sleep
 
 load_dotenv()
@@ -23,23 +25,25 @@ def should_upload(total_bytes: bytes, transformed_json_bytes: bytes) -> bool:
 
 async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> bool:
     logging.info(f"processing relay {relay}")
-    private_client = Client(project=project_id_private)
+    private_client = storage.Client(project=project_id_private)
     start_slot = 7565615
     number_of_slots = 100
     total_bytes = b''
 
-    async def async_upload_data(client, relay, data: bytes) -> bool:
+    async def async_upload_data(client, relay, data: bytes, end_slot) -> bool:
         gzipped_bytes = await async_gzip_bytes(data)
         if gzipped_bytes is None:
             return False
 
         logging.debug(f"file size check:\nndjson Mb:\t{len(data) / (1024 * 1024)}\ngzip Mb:\t{len(gzipped_bytes) / (1024 * 1024)}")
-        return await async_push_builder_blocks_received_to_big_query(client, gzipped_bytes, relay)
+        return await async_push_bids_to_gcs(client, gzipped_bytes, f"{relay}_{end_slot}.gz")
 
     try:
+        last_slot: int = None
         for current_slot in range(start_slot, start_slot - number_of_slots, -1):
+            last_slot = current_slot
             url = f"{base_url}?slot={current_slot}"
-            json_bytes = await async_download_builder_blocks_received(url)
+            json_bytes = await async_download_bids(url)
             
             if json_bytes is None:
                 await asyncio.sleep(rate_limit)
@@ -51,7 +55,7 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> boo
                 continue
 
             if should_upload(total_bytes, transformed_json_bytes):
-                if not await async_upload_data(private_client, relay, total_bytes):
+                if not await async_upload_data(private_client, relay, total_bytes, end_slot=last_slot):
                     logging.error(f"failed to upload bytes for {relay} to bigquery")
                     return False
                 total_bytes = transformed_json_bytes
@@ -60,7 +64,7 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int) -> boo
 
             await asyncio.sleep(rate_limit)
 
-        if len(total_bytes) > 0 and not await async_upload_data(private_client, relay, total_bytes):
+        if len(total_bytes) > 0 and not await async_upload_data(private_client, relay, total_bytes, last_slot):
             logging.error(f"failed to upload last bytes for {relay} to bigquery")
             return False
 
@@ -83,12 +87,12 @@ def process_relay(relay: str, base_url: str, rate_limit: int) -> bool:
             return False
 
         logging.debug(f"file size check:\nndjson Mb:\t{len(data) / (1024 * 1024)}\ngzip Mb:\t{len(gzipped_bytes) / (1024 * 1024)}")
-        return push_builder_blocks_received_to_big_query(client, gzipped_bytes, relay)
+        return push_bids_to_big_query(client, gzipped_bytes, relay)
 
     try:
         for current_slot in range(start_slot, start_slot - number_of_slots, -1):
             url = f"{base_url}?slot={current_slot}"
-            json_bytes = download_builder_blocks_received(url)
+            json_bytes = download_bids(url)
             
             if json_bytes is None:
                 sleep(rate_limit)

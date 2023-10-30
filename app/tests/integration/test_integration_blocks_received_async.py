@@ -1,9 +1,9 @@
 import unittest
-from blocks_received import async_process_relay, async_execute
+from app.bids import async_process_relay, async_execute
 
 class TestBlocksReceived(unittest.IsolatedAsyncioTestCase):
 
-    async def test_download_builder_blocks_received_with_no_limit(self):        
+    async def test_download_bids_with_no_limit(self):        
         relay = "flashbots"
         base_url = "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received"
         response = await async_process_relay(relay, base_url, 2)

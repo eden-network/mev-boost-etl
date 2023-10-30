@@ -3,7 +3,7 @@ with head_slot_per_relay as (
   select  relay,
           max(slot) as head_slot,
           min(slot) as tail_slot
-  from `eden-data-public.flashbots.blocks_received` mb
+  from `eden-data-public.flashbots.bids` mb
   group by relay
 )
 select  mbm.relay,

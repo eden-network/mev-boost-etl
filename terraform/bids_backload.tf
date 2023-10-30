@@ -1,18 +1,7 @@
-provider "google" {  
-  project = "enduring-art-207419"
-  region  = "us-central1"
-}
-
 provider "kubernetes" {
   host                   = "https://${google_container_cluster.primary.endpoint}"
   token                  = data.google_client_config.default.access_token
   cluster_ca_certificate = base64decode(google_container_cluster.primary.master_auth[0].cluster_ca_certificate)  
-}
-
-data "google_client_config" "default" {}
-
-data "google_service_account" "mev_boost_sync_sa" {
-  account_id = "mev-boost-sync-agent@enduring-art-207419.iam.gserviceaccount.com"
 }
 
 resource "google_service_account_iam_binding" "workload_identity_binding" {
@@ -51,7 +40,7 @@ resource "google_container_cluster" "primary" {
   subnetwork         = "mev-boost-subnet"
 
   workload_identity_config {
-    workload_pool = "enduring-art-207419.svc.id.goog"
+    workload_pool = "${var.project_id}.svc.id.goog"
   }
 
   ip_allocation_policy {   

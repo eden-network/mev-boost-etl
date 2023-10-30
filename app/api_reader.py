@@ -3,15 +3,15 @@ import requests
 from requests.exceptions import RequestException
 import logging
 
-async def async_download_builder_blocks_received(url: str) -> bytes | None:
+async def async_download_bids(url: str) -> bytes | None:
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(
         None,
-        download_builder_blocks_received,
+        download_bids,
         url
     )
 
-def download_builder_blocks_received(url: str) -> bytes | None:
+def download_bids(url: str) -> bytes | None:
     try:
         response = requests.get(url, stream=True)
         if response.status_code == 200:

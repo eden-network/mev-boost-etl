@@ -10,7 +10,7 @@ ENV PROJECT_ID_PUBLIC "avalanche-304119"
 ENV DATASET_ID "flashbots"
 ENV RATE_LIMIT_SECONDS 2
 ENV LOGGING_LEVEL "INFO"
-ENV BLOCKS_RECEIVED_TABLE_ID_STAGING "blocks_received_staging"
+ENV BIDS_TABLE_ID_STAGING "bids_staging"
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -27,4 +27,4 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY ./app /app/
 
 # Specify the command to run on container start
-CMD ["python", "blocks_received.py"]
+CMD ["python", "bids.py"]

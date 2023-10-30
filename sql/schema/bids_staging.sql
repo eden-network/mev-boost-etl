@@ -1,4 +1,4 @@
-create table flashbots.blocks_received_staging_archive (    
+create table flashbots.bids_staging (    
     relay string not null options(description='the relay that receveived the block'),
     slot integer not null options(description='slot number'),
     parent_hash string not null options(description='hash of the parent block'),

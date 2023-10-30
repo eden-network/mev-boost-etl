@@ -31,43 +31,43 @@ gcloud config set project $public_project_id
 
 ### Service account
 
-The blocks received solution will use mev_boost_sync_agent service account created during the deployment of the mev-boost solution.
+The bids solution will use mev_boost_sync_agent service account created during the deployment of the mev-boost solution.
 
 ### Big Query
 
 The `eden-data-public` project houses relay data extracted from known providers. We perform the following steps here:
 
 - Reuse the `flashbots` dataset in `eden-data-private` and `eden-data-public`
-- Create `blocks_received_staging` and `blocks-received-staging-archive` tables in `eden-data-private`
-- Create a `blocks_received` table in `eden-data-public`
+- Create `bids_staging` and `blocks-bids-staging-archive` tables in `eden-data-private`
+- Create a `bids` table in `eden-data-public`
 
 ```bash
 # Activate eden-data-private configuration
 gcloud config configurations activate $private_project
 
 # Create kline_1s_config table:
-bq query --use_legacy_sql=false --project_id=$private_project_id < ./sql/schema/blocks_received.sql
+bq query --use_legacy_sql=false --project_id=$private_project_id < ./sql/schema/bids.sql
 
-# Check if blocks_received_staging_archive table exists
+# Check if bids_staging_archive table exists
 if bq ls $dataset_name | grep -q $table_name_staging_archive; then
     echo "Table $dataset_name.$table_name_staging_archive already exists."
 else
     # Create table
     bq mk \
-        --schema ./sql/schema/blocks_received_staging_archive.json \
+        --schema ./sql/schema/bids_staging_archive.json \
         --table $dataset_name.$table_name_staging_archive
 fi
 
 # Activate eden-data-public configuration
 gcloud config configurations activate $public_project
 
-# Check if blocks_received table exists
+# Check if bids table exists
 if bq ls $dataset_name | grep -q $table_name; then
     echo "Table $dataset_name.$table_name already exists."
 else
     # Create the table
     bq mk \
-        --schema ./sql/schema/blocks_received.json \
+        --schema ./sql/schema/bids.json \
         --time_partitioning_field block_timestamp \
         --time_partitioning_type DAY \
         --clustering_fields relay,builder_pubkey,slot \
@@ -78,7 +78,7 @@ fi
 gcloud config configurations activate $private_project
 
 # Create mev_boost_metadata view
-bq query --use_legacy_sql=false "$(cat ./sql/views/blocks_received_metadata.sql)"
+bq query --use_legacy_sql=false "$(cat ./sql/views/bids_metadata.sql)"
 ```
 
 ### Backload kubernetes cluster multi-node

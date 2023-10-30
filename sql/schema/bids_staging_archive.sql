@@ -1,5 +1,4 @@
-create table flashbots.blocks_received (
-    block_timestamp timestamp not null options(description='timestamp of block'),
+create table flashbots.bids_staging_archive (    
     relay string not null options(description='the relay that receveived the block'),
     slot integer not null options(description='slot number'),
     parent_hash string not null options(description='hash of the parent block'),
@@ -15,5 +14,5 @@ create table flashbots.blocks_received (
     timestamp timestamp not null options(description='timestamp block received'),
     timestamp_s integer not null options(description='timestamp in seconds when block received'),
     timestamp_ms integer not null options(description='timestamp in ms when block received'),
-    optimistic_submission boolean not null options(description='whether block submitted was configured as optimistic')
+    optimistic_submission boolean options(description='whether block submitted was configured as optimistic')
 );
