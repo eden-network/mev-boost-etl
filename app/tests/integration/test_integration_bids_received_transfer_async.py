@@ -1,5 +1,5 @@
 import unittest
-from bids_received_transfer import async_execute
+from app.bids_transfer import async_execute
 
 class TestBidsReceivedTransfer(unittest.IsolatedAsyncioTestCase):    
 
