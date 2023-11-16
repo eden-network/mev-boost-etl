@@ -7,7 +7,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 ENV PROJECT_ID_PRIVATE "eden-data-private"
 ENV PROJECT_ID_PUBLIC "eden-data-public"
-ENV DATASET_ID "flashbots"
+ENV DATASET_ID "mev_boost"
 ENV TABLE_ID "mev_boost"
 ENV TABLE_ID_STAGING "mev_boost_staging"
 ENV METADATA_VIEW_ID "mev_boost_metadata"

@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: mev-boost-bids-statefulset
+spec:
+  serviceName: "mev-boost-bids-service"
+  replicas: 8
+  selector:
+    matchLabels:
+      app: mev-boost-bids-etl
+  template:
+    metadata:
+      labels:
+        app: mev-boost-bids-etl
+    spec:
+      serviceAccountName: mev-boost-k8s-sa
+      containers:
+        - name: mev-boost-bids-container
+          image: gcr.io/enduring-art-207419/mev-boost-bids-etl:latest
+          env:
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+      nodeSelector:
+        pool: mev-boost-node-pool
