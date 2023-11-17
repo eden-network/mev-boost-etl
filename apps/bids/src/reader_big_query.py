@@ -14,7 +14,7 @@ def get_latest_slot(client) -> int:
     """
     Get latest from the BigQuery.
     """
-    query = (f"select max(block_slot) as slot from from `public-data-finance.crypto_ethereum2.beacon_blocks` where date(block_timestamp) = current_date('UTC')")
+    query = (f"select max(block_slot) as slot from `public-data-finance.crypto_ethereum2.beacon_blocks` where date(block_timestamp) = current_date('UTC')")
     try:
         logging.info("getting latest slot from bigquery")
         query_job = client.query(query)
@@ -23,6 +23,29 @@ def get_latest_slot(client) -> int:
             return None
 
         results = query_job.result()
+
+        rows = [dict(zip(row.keys(), row.values())) for row in results]
+        if len(rows) == 0:
+            logging.error(f"expected 1 or more rows but got: {len(rows)}")
+            return None    
+        
+        if len(rows) > 1:
+            logging.error(f"expected 1 row but got: {len(rows)}")
+            return None    
+            
+        slot = rows[0]['slot']
+
+        if slot is None:
+            logging.error(f"invalid slot returned: None")
+            return None
+
+        slot = int(slot) - 50 # (take 50 slots off to give some buffer [50 * 12s = 10min])
+
+        if slot < 4700567:
+            logging.error(f"invalid slot returned: before first mev-boost slot (4700567)")
+            return None
+
+        return slot
 
     except BadRequest as e:
         logging.error(f"bad request error: {e}")
@@ -33,17 +56,6 @@ def get_latest_slot(client) -> int:
     except Exception as e:
         logging.error(f"an unexpected error occurred: {e}")
         return None
-
-    rows = [dict(zip(row.keys(), row.values())) for row in results]
-    if len(rows) == 0:
-        logging.error(f"expected 1 or more rows but got: {len(rows)}")
-        return None    
-    
-    if len(rows) > 1:
-        logging.error(f"expected 1 row but got: {len(rows)}")
-        return None    
-        
-    return rows[0].slot
 
 async def async_get_pod_config(client):
     loop = asyncio.get_event_loop()
