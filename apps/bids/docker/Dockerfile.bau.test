@@ -5,17 +5,26 @@ FROM python:3.11-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
+ENV LOGGING_LEVEL "INFO"
 ENV PROJECT_ID_PRIVATE "enduring-art-207419"
-ENV PROJECT_ID_PUBLIC "avalanche-304119"
 ENV DATASET_ID "mev_boost"
-ENV TABLE_ID "mev_boost"
-ENV TABLE_ID_STAGING "mev_boost_staging"
-ENV METADATA_VIEW_ID "mev_boost_metadata"
-ENV BATCH_SIZE 100
-ENV RATE_LIMIT_SECONDS 2
+ENV CONFIG_TABLE_ID "etl_config"
+ENV TABLE_ID_STAGING "bids_staging"
+ENV POD_CONFIG_TABLE_ID "bids_pod_config"
+ENV BAU_CONFIG_TABLE_ID "bids_bau_config"
+ENV BUCKET_NAME "mev-boost-bids"
+ENV BATCH_SIZE_MB 30
+ENV LOAD_SP_ID "load_bids"
 
 # Set the working directory inside the container
 WORKDIR /app
+
+# Create a virtual environment in the container
+# This environment is isolated from the global Python environment
+RUN python -m venv venv
+
+# Activate the virtual environment
+ENV PATH="/app/venv/bin:$PATH"
 
 # Install system dependencies (if any, remove if not needed)
 RUN apt-get update && apt-get install -y --no-install-recommends && \
@@ -23,10 +32,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends && \
 
 # Copy requirements file and install Python dependencies
 COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 # Copy your application code into the container
-COPY ./app /app/
+COPY ./src /app/
 
 # Specify the command to run on container start
-CMD ["python", "main.py"]
+CMD ["python", "main_bau.py"]

@@ -1,0 +1,18 @@
+import unittest
+from main_backload import async_process_relay, async_execute
+
+class TestBidAsync(unittest.IsolatedAsyncioTestCase):
+
+    async def test_download_bids_with_no_limit(self):        
+        relay = "flashbots"
+        base_url = "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received"
+        response = await async_process_relay(relay, base_url, 2, 7565615, 7565515)
+        self.assertEqual(response, True)
+
+    async def test_async_execute_integration(self):
+        results = await async_execute()
+                
+        self.assertTrue(all(results), "Not all relays processed successfully.")        
+
+if __name__ == '__main__':
+    unittest.main()
