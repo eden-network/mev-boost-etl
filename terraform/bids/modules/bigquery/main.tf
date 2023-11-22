@@ -62,40 +62,21 @@ resource "google_bigquery_table" "bids_ui" {
   schema = file("${path.module}/bids_staging.json")
 }
 
+
+
 resource "google_bigquery_table" "config" {
   dataset_id = var.dataset_id
   table_id   = var.config_view_id
 
   view {
-    query = file("${path.module}/config.sql")
+    query = templatefile("${path.module}/config.sql", {
+      project_id = var.project_id,
+      dataset_id = var.dataset_id,
+      bids_table_id   = var.table_id
+    })
     use_legacy_sql = false
   }
 }
-
-# resource "google_project_iam_member" "bigquery_scheduler_permissions" {  
-#   project = var.project_id
-#   role   = "roles/iam.serviceAccountShortTermTokenMinter"
-#   member = "serviceAccount:${var.service_account_email}"
-# }
-
-# resource "google_project_iam_binding" "bigquery_datatransfer_admin" {
-#   project = var.project_id
-#   role    = "roles/bigquery.admin"
-#   members = ["serviceAccount:${var.service_account_email}"]
-# }
-
-# resource "google_bigquery_data_transfer_config" "scheduled_query" {
-#   display_name            = "mev_boost_bids_transformation"  
-#   data_source_id          = "scheduled_query"
-#   schedule                = "every 30 minutes"
-#   params = {
-#     query                 = file("${path.module}/mev_boost_bids_transformation.sql")    
-#     write_disposition     = "WRITE_APPEND"
-#   }
-#   disabled                = true
-#   service_account_name    = var.service_account_name
-#   location                = var.location
-# }
 
 resource "google_bigquery_routine" "sproc" {
   dataset_id = var.dataset_id
@@ -103,5 +84,13 @@ resource "google_bigquery_routine" "sproc" {
   routine_id = var.load_storedproc_name
   routine_type = "PROCEDURE"
   language = "SQL"
-  definition_body = file("${path.module}/create_bids_transformation_sp.sql")
+  definition_body = templatefile("${path.module}/load_bids.sql", {
+    sp_id = var.load_storedproc_name,
+    project_id = var.project_id,
+    dataset_id = var.dataset_id,
+    bids_table_id   = var.table_id,
+    bids_staging_table_id = var.staging_table_id,
+    bids_staging_archive_table_id = "${var.staging_table_id}_archive",
+    ui_table_id = var.ui_table_id
+  })
 }

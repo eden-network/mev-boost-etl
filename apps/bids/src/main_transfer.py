@@ -18,7 +18,7 @@ logging.basicConfig(level=logging.getLevelName(logging_level))
 logging.getLogger("google.api_core").setLevel(logging.ERROR)
 logging.getLogger("asyncio").setLevel(logging.ERROR)
 
-async def async_execute():
+async def async_execute() -> bool:
     logging.info("initializing bids blob transfer")
 
     try:
@@ -48,12 +48,13 @@ async def async_execute():
                     bucket.copy_blob(blob, failed_bucket, blob.name)
                     bucket.delete_blob(blob.name)
 
-            full_results.extend(results)        
-            await asyncio.sleep(10)
+            full_results.extend(results)
+            await asyncio.sleep(10)        
 
-        return full_results
+        return True
     except Exception as e:
         logging.error(f"An unexpected error occurred: {e}")
+        return False
 
 if __name__ == '__main__':
     asyncio.run(async_execute())

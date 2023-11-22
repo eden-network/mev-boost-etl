@@ -20,9 +20,7 @@ logging.basicConfig(level=logging.getLevelName(logging_level))
 def execute():
     """
     Main function that executes the ETL process.
-    """
-    # Initializing the BigQuery client
-    public_client = bigquery.Client(project=project_id_public)
+    """        
     private_client = bigquery.Client(project=project_id_private)    
 
     logging.info("initializing relay data etl")    

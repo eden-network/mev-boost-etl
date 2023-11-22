@@ -46,22 +46,15 @@ module "storage" {
 module "etl" {
   source = "../../modules/etl"
 
-  project                      = var.project_id  
+  project                      = var.project_id
   location                     = "us-central1"
   service_account_email        = data.google_service_account.mev_boost_etl.email
-
-  # bids transfer
-  job_name                     = "mev-boost-bids-transfer"  
-  container_image              = "gcr.io/${var.project_id}/mev-boost-bids-transfer:latest"
-  scheduler_job_name           = "mev-boost-bids-transfer-schedule"
-  scheduler_schedule           = "5,35 * * * *"  
-
-  # bids bau
-  bau_job_name                 = "mev-boost-bids-bau"  
-  bau_container_image          = "gcr.io/${var.project_id}/mev-boost-bids-bau-etl:latest"
-  bau_scheduler_job_name       = "mev-boost-bids-bau-schedule"
-  bau_scheduler_schedule       = "15,45 * * * *"  
-  bau_job_timeout              = "900s"
+  
+  job_name                     = "mev-boost-bids"
+  container_image              = "gcr.io/${var.project_id}/mev-boost-bids-bau-etl:latest"
+  scheduler_job_name           = "mev-boost-bids"
+  scheduler_schedule           = "*/15 * * * *"
+  job_timeout                  = "900s"
 }
 
 output "stage_table_id" {
@@ -89,18 +82,10 @@ output "failed_bucket_name" {
   value = module.storage.failed_bucket_name
 }
 
-output "bids_transfer_cloud_run_job_name" {  
+output "bids_cloud_run_job_name" {  
   value = module.etl.cloud_run_job_name
 }
 
-output "bids_transfer_cloud_scheduler_job_name" {
+output "bids_cloud_scheduler_job_name" {
   value = module.etl.cloud_scheduler_job_name
-}
-
-output "bau_cloud_run_job_name" {  
-  value = module.etl.bau_cloud_run_job_name
-}
-
-output "bau_cloud_scheduler_job_name" {  
-  value = module.etl.bau_cloud_scheduler_job_name
 }
