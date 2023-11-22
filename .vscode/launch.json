@@ -6,7 +6,7 @@
       "type": "python",
       "request": "launch",
       "program": "${file}",
-      "cwd": "${workspaceFolder}/apps/bids/src",
+      "cwd": "${workspaceFolder}/apps/bids_backload/src",
       "console": "integratedTerminal"
     },
     {
@@ -16,7 +16,7 @@
       "program": "${file}",
       "purpose": ["debug-test"],
       "console": "integratedTerminal",
-      "cwd": "${workspaceFolder}/apps/bids/src",
+      "cwd": "${workspaceFolder}/apps/bids_backload/src",
       "justMyCode": false
     }
   ]

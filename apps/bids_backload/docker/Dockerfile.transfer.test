@@ -5,15 +5,21 @@ FROM python:3.11-slim
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
-ENV PROJECT_ID_PRIVATE "enduring-art-207419"
 ENV LOGGING_LEVEL "INFO"
+ENV PROJECT_ID_PRIVATE "enduring-art-207419"
 ENV DATASET_ID "mev_boost"
-ENV BIDS_TABLE_ID_STAGING "bids_staging"
-ENV TABLE_ID_STAGING "mev_boost_staging"
+ENV TABLE_ID_STAGING "bids_staging"
 ENV BUCKET_NAME "mev-boost-bids"
 
 # Set the working directory inside the container
 WORKDIR /app
+
+# Create a virtual environment in the container
+# This environment is isolated from the global Python environment
+RUN python -m venv venv
+
+# Activate the virtual environment
+ENV PATH="/app/venv/bin:$PATH"
 
 # Install system dependencies (if any, remove if not needed)
 RUN apt-get update && apt-get install -y --no-install-recommends && \
@@ -21,10 +27,10 @@ RUN apt-get update && apt-get install -y --no-install-recommends && \
 
 # Copy requirements file and install Python dependencies
 COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN pip install --upgrade pip && pip install --no-cache-dir -r requirements.txt
 
 # Copy your application code into the container
-COPY ./app /app/
+COPY ./src /app/
 
 # Specify the command to run on container start
-CMD ["python", "bids_transfer.py"]
+CMD ["python", "main_transfer.py"]

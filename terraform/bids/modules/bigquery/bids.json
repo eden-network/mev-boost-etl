@@ -1,0 +1,103 @@
+[
+    {
+        "description": "the block_timestamp of the block associated with this bid",
+        "mode": "REQUIRED",
+        "name": "block_timestamp",
+        "type": "TIMESTAMP"
+    },
+    {
+        "description": "the relay that receveived the block",
+        "mode": "REQUIRED",
+        "name": "relay",
+        "type": "STRING"
+    },
+    {
+        "description": "slot number",
+        "mode": "REQUIRED",
+        "name": "slot",
+        "type": "INTEGER"
+    },
+    {
+        "description": "hash of the parent block",
+        "mode": "REQUIRED",
+        "name": "parent_hash",
+        "type": "STRING"
+    },
+    {
+        "description": "hash of the block",
+        "mode": "REQUIRED",
+        "name": "block_hash",
+        "type": "STRING"
+    },
+    {
+        "description": "public key of builder",
+        "mode": "REQUIRED",
+        "name": "builder_pubkey",
+        "type": "STRING"
+    },
+    {
+        "description": "public key of proposer",
+        "mode": "REQUIRED",
+        "name": "proposer_pubkey",
+        "type": "STRING"
+    },
+    {
+        "description": "fee recipient of proposer",
+        "mode": "REQUIRED",
+        "name": "proposer_fee_recipient",
+        "type": "STRING"
+    },
+    {
+        "description": "the maximum gas allowed in this block",
+        "mode": "REQUIRED",
+        "name": "gas_limit",
+        "type": "INTEGER"
+    },
+    {
+        "description": "the total used gas by all transactions in this block",
+        "mode": "REQUIRED",
+        "name": "gas_used",
+        "type": "INTEGER"
+    },
+    {
+        "description": "mev block reward",
+        "mode": "REQUIRED",
+        "name": "value",
+        "type": "NUMERIC"
+    },
+    {
+        "description": "the number of transactions in the block",
+        "mode": "REQUIRED",
+        "name": "num_tx",
+        "type": "INTEGER"
+    },
+    {
+        "description": "the block number",
+        "mode": "REQUIRED",
+        "name": "block_number",
+        "type": "INTEGER"
+    },
+    {
+        "description": "timestamp block received",
+        "mode": "REQUIRED",
+        "name": "timestamp",
+        "type": "TIMESTAMP"
+    },
+    {
+        "description": "timestamp in seconds when block received",
+        "mode": "REQUIRED",
+        "name": "timestamp_s",
+        "type": "INTEGER"
+    },
+    {
+        "description": "timestamp in ms when block received",
+        "mode": "REQUIRED",
+        "name": "timestamp_ms",
+        "type": "INTEGER"
+    },
+    {
+        "description": "whether block submitted was configured as optimistic",
+        "name": "optimistic_submission",
+        "type": "BOOLEAN"
+    }
+]

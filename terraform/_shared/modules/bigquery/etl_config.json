@@ -1,0 +1,32 @@
+[
+    {
+        "description": "the relay name/id",
+        "mode": "REQUIRED",
+        "name": "relay",
+        "type": "STRING"
+    },
+    {
+        "description": "whether we should extract data from this relay",
+        "mode": "REQUIRED",
+        "name": "active",
+        "type": "BOOLEAN"
+    },
+    {
+        "description": "the relay url",
+        "mode": "REQUIRED",
+        "name": "url",
+        "type": "STRING"
+    },
+    {
+        "description": "the max number of slots that can downloaded for this relay's payloads api",
+        "mode": "REQUIRED",
+        "name": "payloads_batch_size",
+        "type": "INTEGER"
+    },
+    {
+        "description": "the rate limit in seconds imposed on the payloads api",
+        "mode": "REQUIRED",
+        "name": "bids_rate_limit",
+        "type": "INTEGER"
+    }
+]

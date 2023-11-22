@@ -17,9 +17,6 @@ async def async_push_bids_to_gcs(client: Client, gzip_file_bytes: bytes, object_
     )
 
 def push_bids_to_gcs(client: Client, gzip_file_bytes: bytes, object_name: str) -> bool:
-    """
-    Uploads gzip bytes to Google Cloud Storage.
-    """
     logging.info(f"Uploading gzip bytes for {object_name} to GCS bucket {bucket_name}")
     try:        
         bucket = client.bucket(bucket_name)

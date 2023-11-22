@@ -22,10 +22,6 @@ async def async_gzip_bytes(input_bytes: bytes) -> bytes | None:
     )
 
 def transform_bytes(input_bytes: bytes, relay: str, slot: date) -> bytes | None:
-    """
-    Transforms JSON bytes, adding additional properties to each JSON object
-    and returning newline delimited json bytes.
-    """
     try:        
         json_content = json.loads(input_bytes.decode('utf-8'))
         transformed_lines = []
@@ -54,9 +50,6 @@ def transform_bytes(input_bytes: bytes, relay: str, slot: date) -> bytes | None:
         return None
     
 def gzip_bytes(input_bytes: bytes) -> bytes | None:
-    """
-    Gzips bytes.
-    """
     try:
         with BytesIO() as gzip_file_stream:
             with GzipFile(fileobj=gzip_file_stream, mode='wb') as gzip_file:

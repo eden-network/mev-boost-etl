@@ -3,6 +3,11 @@ variable "job_name" {
   type        = string
 }
 
+variable "bau_job_name" {
+  description = "The name of the Cloud Run job for the BAU application"
+  type        = string
+}
+
 variable "location" {
   description = "The location where the job and scheduler will be deployed"
   type        = string
@@ -10,6 +15,11 @@ variable "location" {
 
 variable "container_image" {
   description = "The container image for the Cloud Run job"
+  type        = string
+}
+
+variable "bau_container_image" {
+  description = "The container image for the Cloud Run job for the BAU application"
   type        = string
 }
 
@@ -24,13 +34,30 @@ variable "job_timeout" {
   type        = string
 }
 
+variable "bau_job_timeout" {
+  description = "The maximum duration of the Cloud Run job for the BAU application"
+  default     = "900s"
+  type        = string
+}
+
 variable "scheduler_job_name" {
   description = "The name of the Cloud Scheduler job"
   type        = string
 }
 
+variable "bau_scheduler_job_name" {
+  description = "The name of the Cloud Scheduler job for the BAU application"
+  type        = string
+}
+
+
 variable "scheduler_schedule" {
   description = "The schedule on which the Cloud Scheduler job should run"
+  type        = string
+}
+
+variable "bau_scheduler_schedule" {
+  description = "The schedule on which the Cloud Scheduler job should run for the BAU application"
   type        = string
 }
 

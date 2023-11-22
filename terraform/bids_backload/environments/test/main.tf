@@ -42,12 +42,12 @@ module "k8s_backload" {
   k8s_service_account             = "mev-boost-k8s-sa"
   service_account_email           = data.google_service_account.etl_service_account.email
   cluster_name                    = "mev-boost-gke-cluster"
-  cluster_location                = "us-central1"
+  cluster_location                = "us-central1-a"
   cluster_secondary_range_name    = "mev-boost-subnet-pods"
   services_secondary_range_name   = "mev-boost-subnet-services"
   node_pool_name                  = "mev-boost-node-pool"
-  node_pool_location              = "us-central1"
-  node_pool_count                 = 8
+  node_pool_location              = "us-central1-a"
+  node_pool_count                 = 10
   machine_type                    = "e2-medium"
   node_labels                     = { pool = "mev-boost-node-pool" }
   oauth_scopes                    = [

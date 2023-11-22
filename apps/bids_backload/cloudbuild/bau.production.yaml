@@ -1,0 +1,13 @@
+steps:
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/eden-data-private/mev-boost-bids-bau-etl",
+        "-f",
+        "./docker/Dockerfile.bau.production",
+        ".",
+      ]
+images:
+  - "gcr.io/eden-data-private/mev-boost-bids-bau-etl"

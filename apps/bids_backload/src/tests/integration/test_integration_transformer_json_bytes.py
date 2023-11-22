@@ -1,6 +1,6 @@
 from io import BytesIO
 import unittest
-from json_bytes_transformer import transform_bytes
+from transformer_json_bytes import transform_bytes
 from gzip import GzipFile
 
 class TestJsonByteTransformer(unittest.TestCase):    

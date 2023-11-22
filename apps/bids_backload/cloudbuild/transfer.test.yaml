@@ -6,7 +6,7 @@ steps:
         "-t",
         "gcr.io/enduring-art-207419/mev-boost-bids-transfer",
         "-f",
-        "./Dockerfile.bids_transfer.test",
+        "./docker/Dockerfile.bids_transfer.test",
         ".",
       ]
 images:
