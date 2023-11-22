@@ -90,7 +90,6 @@ resource "google_bigquery_routine" "sproc" {
     dataset_id = var.dataset_id,
     bids_table_id   = var.table_id,
     bids_staging_table_id = var.staging_table_id,
-    bids_staging_archive_table_id = "${var.staging_table_id}_archive",
-    ui_table_id = var.ui_table_id
+    bids_staging_archive_table_id = "${var.staging_table_id}_archive"    
   })
 }
