@@ -1,5 +1,0 @@
-python-dotenv
-requests
-google-cloud-bigquery
-google-cloud-storage
-google-api-core
