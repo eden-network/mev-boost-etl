@@ -22,9 +22,9 @@ module "bigquery_bids" {
   staging_table_id                    = "bids_staging"  
 
   ui_table_id                         = "bids_ui"
-  block_number_partitioning_start     = 18237000
-  block_number_partitioning_end       = 18519100
-  block_number_partitioning_interval  = 100
+  block_number_partitioning_start     = 15537940
+  block_number_partitioning_end       = 19537939
+  block_number_partitioning_interval  = 1000
 
   service_account_name               = data.google_service_account.mev_boost_etl.name
   service_account_email              = data.google_service_account.mev_boost_etl.email

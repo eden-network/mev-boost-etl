@@ -10,7 +10,7 @@ def fetch_data_from_url(url, batch_size, cursor="latest"):
     """
     Fetch data from the given URL. If cursor is not "latest", append it to the URL to fetch a specific batch.
     """
-    url = f"{url}?limit={batch_size}"
+    url = f"{url}/proposer_payload_delivered?limit={batch_size}"
     if cursor != "latest":
         url = f"{url}&cursor={cursor}"
 
@@ -119,7 +119,7 @@ def get_relay_data(relay, url, batch_size, cursor, current_file_size, file_count
     next_cursor = determine_next_cursor(data, head_slot)
     return next_cursor, current_file_size, file_count
         
-def process_relay(relay, url, batch_size, head_slot, tail_slot, back_fill=False):
+def process_relay(relay, url, batch_size, head_slot, tail_slot):
     """
     Process a single relay by fetching its data, processing it, and saving it to files.
     
@@ -128,17 +128,15 @@ def process_relay(relay, url, batch_size, head_slot, tail_slot, back_fill=False)
         url: url to fetch data from
         batch_size (int): The number of slots to fetch per batch.
         head_slot (int): The slot to start processing from.        
-        tail_slot (int): The oldest slot loaded for this relay.
-        back_fill (bool): Whether to back fill data or not.
+        tail_slot (int): The oldest slot loaded for this relay.        
         
     Returns:
         bool: True if successful, False otherwise.
     """    
-    cursor = "latest" if back_fill == False else tail_slot
-    head_slot = head_slot if back_fill == False else 0
+    cursor = "latest"    
     current_file_size = 0
     file_count = 1
-    logging.debug(f"processing relay {relay} with the following parameters: head_slot: {head_slot}, tail_slot: {tail_slot}, back_fill: {back_fill}, cursor: {cursor}")
+    logging.debug(f"processing relay {relay} with the following parameters: head_slot: {head_slot}, tail_slot: {tail_slot}, cursor: {cursor}")
 
     while cursor != "0":
         logging.debug(f"relay {relay}, cursor value: {cursor}")

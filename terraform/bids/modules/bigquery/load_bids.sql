@@ -43,3 +43,7 @@ select  b1.block_timestamp,
         lhb.*        
 from latest_bids lhb
 join blocks b1 on b1.block_number = lhb.block_number;
+
+insert into `${project_id}.${dataset_id}.${ui_table_id}`
+select  *
+from latest_bids;

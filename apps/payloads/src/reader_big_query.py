@@ -6,15 +6,15 @@ import os
 load_dotenv()
 
 dataset_id = os.getenv("DATASET_ID")
-metadata_view_id = os.getenv("METADATA_VIEW_ID")
+config_view_id = os.getenv("CONFIG_VIEW_ID")
 
-def get_relay_metadata(client):
+def get_config(client):
     """
-    Get relay metadata from the BigQuery.
+    Get config from the BigQuery.
     """
-    query = (f"select relay, url, batch_size, head_slot, tail_slot, back_fill from `{dataset_id}.{metadata_view_id}` where active = true")
+    query = (f"select relay, url, batch_size, head_slot, tail_slot from `{dataset_id}.{config_view_id}` where active = true")
     try:
-        logging.info("getting relay metadata from bigquery")
+        logging.info("getting config from bigquery")
         query_job = client.query(query)
         if query_job.errors:
             logging.error(f"sql query returned an error: {query_job.error_result}")

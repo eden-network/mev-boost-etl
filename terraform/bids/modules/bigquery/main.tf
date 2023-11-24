@@ -47,6 +47,7 @@ resource "google_bigquery_table" "bids" {
 resource "google_bigquery_table" "bids_ui" {
   dataset_id = var.dataset_id
   table_id   = var.ui_table_id  
+  deletion_protection = false
 
   range_partitioning {
     field = "block_number"
@@ -90,6 +91,7 @@ resource "google_bigquery_routine" "sproc" {
     dataset_id = var.dataset_id,
     bids_table_id   = var.table_id,
     bids_staging_table_id = var.staging_table_id,
-    bids_staging_archive_table_id = "${var.staging_table_id}_archive"    
+    bids_staging_archive_table_id = "${var.staging_table_id}_archive",
+    ui_table_id = var.ui_table_id
   })
 }
