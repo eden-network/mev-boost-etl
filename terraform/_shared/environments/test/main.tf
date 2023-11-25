@@ -34,6 +34,7 @@ module "bigquery_mev_boost" {
 
   service_account_email = module.service_account.service_account_email
   
+  public_project_id     = "avalanche-304119"
 }
 
 output "service_account_email" {

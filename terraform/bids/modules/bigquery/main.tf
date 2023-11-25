@@ -95,3 +95,27 @@ resource "google_bigquery_routine" "sproc" {
     ui_table_id = var.ui_table_id
   })
 }
+
+resource "google_bigquery_table" "bids_public" {
+  project = var.public_project_id
+  dataset_id = var.dataset_id
+  table_id   = var.table_id
+  view {
+    query = templatefile("${path.module}/bids_public.sql", {    
+    project_id = var.project_id,
+    dataset_id = var.dataset_id,
+    table_id   = var.table_id 
+  })
+    use_legacy_sql = false
+  }
+}
+
+resource "google_bigquery_dataset_access" "permissioned_view" {
+  dataset_id = var.dataset_id
+
+  view {
+    project_id = var.public_project_id
+    dataset_id = var.dataset_id
+    table_id   = var.table_id
+  }
+}

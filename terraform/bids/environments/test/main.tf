@@ -11,7 +11,7 @@ module "bigquery_bids" {
   source = "../../modules/bigquery"
   project_id                          = var.project_id
   dataset_id                          = "mev_boost"
-
+  public_project_id                   = "avalanche-304119"
   config_view_id                      = "bids_bau_config"
 
   table_id                            = "bids"

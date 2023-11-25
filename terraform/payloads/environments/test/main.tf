@@ -10,6 +10,7 @@ data "google_service_account" "mev_boost_etl" {
 module "bigquery" {
   source = "../../modules/bigquery"
   project_id                          = var.project_id
+  public_project_id                   = "avalanche-304119"
   dataset_id                          = "mev_boost"
 
   service_account_name               = data.google_service_account.mev_boost_etl.name

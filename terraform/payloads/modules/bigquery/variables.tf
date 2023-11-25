@@ -52,3 +52,8 @@ variable "location" {
   description = "The location of the scheduled query"
   type        = string
 }
+
+variable "public_project_id" {
+  description = "The GCP project ID of the public project."
+  type        = string
+}
