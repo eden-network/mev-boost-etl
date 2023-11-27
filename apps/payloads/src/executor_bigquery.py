@@ -19,7 +19,8 @@ def execute(client: Client) -> bool:
             logging.error(f"execution of stored procedure returned an error: {query_job.error_result}")
             return False                                
         
-        result = query_job.result()
+        query_job.result()
+        logging.info(f"execution of stored procedure completed successfully")
 
         return True  
     
@@ -30,5 +31,5 @@ def execute(client: Client) -> bool:
         logging.error(f"forbidden error: {e}")
         return False     
     except Exception as e:
-        logging.error(f"Unexpected error occurred when executing stored procedure: {e}")
+        logging.error(f"unexpected error occurred when executing stored procedure: {e}")
         return False        

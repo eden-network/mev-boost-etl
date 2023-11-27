@@ -2,7 +2,7 @@ import os
 import sys
 import logging
 from google.cloud.bigquery import Client
-from reader_big_query import get_config
+from reader_big_query import get_config, get_latest_slot
 from relay_data_functions import process_relay
 from file_operations import update_file_names, reset_local_storage
 from writer_big_query import push_to_big_query
@@ -17,20 +17,21 @@ project_id = os.getenv("PROJECT_ID")
 logging.basicConfig(level=logging.getLevelName(logging_level))
 
 def extract(client: Client) -> bool:
-    """
-    Main function that executes the ETL process.
-    """            
-    relay_metadata = get_config(client)
-    if relay_metadata is None:
+    latest_slot = get_latest_slot(client)
+    logging.info(f"latest slot: {latest_slot}")
+
+    config = get_config(client)
+    logging.info(f"payloads config: {config}")
+    if config is None:
         return False
 
     reset_local_storage()
     
     successful_relays = []
     unsuccessful_relays = []
-    for row in relay_metadata:
+    for row in config:
         success = True
-        success = process_relay(row['relay'], row['url'], row['batch_size'], row['head_slot'], row['tail_slot'])
+        success = process_relay(row['relay'], row['url'], row['batch_size'], row['head_slot'], latest_slot)
         if success:
             successful_relays.append(row['relay'])
             logging.info(f"relay {row['relay']} processed successfully")
@@ -41,7 +42,7 @@ def extract(client: Client) -> bool:
     if len(successful_relays) > 0:
         logging.info(f"{len(successful_relays)} relays processed successfully, pushing data to bigquery")
         update_file_names('data/*_*.ndjson')
-        push_to_big_query(client)
+        # push_to_big_query(client)
     else:
         logging.error("no relays were processed successfully, exiting")
         return False
@@ -52,7 +53,7 @@ def extract(client: Client) -> bool:
     return True
 
 def execute():
-    logging.info("initializing payloads etl")    
+    logging.info("payloads etl initializing")
 
     try:
         client = Client(project=project_id)    
@@ -60,11 +61,13 @@ def execute():
         if extract(client) is False:
             sys.exit(1)
 
-        if load(client) is False:
-            sys.exit(1)
+        # if load(client) is False:
+        #     sys.exit(1)
+
+        logging.info("payloads etl completed successfully")
 
     except Exception as e:
-        logging.error(f"An unexpected error occurred: {e}")        
+        logging.error(f"an unexpected error occurred: {e}")        
         sys.exit(1)
 
 if __name__ == '__main__':

@@ -74,26 +74,10 @@ def determine_next_cursor(data, start_slot):
         return "0"
 
 def get_relay_data(relay, url, batch_size, cursor, current_file_size, file_count, head_slot):
-    """
-    Fetch, process, and write relay data to files.
-    
-    Parameters:
-        relay (str): Relay ID.
-        url (str): URL to fetch data from.
-        cursor (str): Position to start fetching data from.
-        current_file_size (int): Current size of the output file.
-        file_count (int): Counter for the number of files created.
-        head_slot (int): The slot at which to stop processing.
-        
-    Returns:
-        next_cursor (str): The next cursor to use for fetching data.
-        current_file_size (int): Updated current file size.
-        file_count (int): Updated file count.
-    """
     max_file_size = 15 * 1024 * 1024  # Max file size is 15 MB
     error, data = fetch_data_from_url(url, batch_size, cursor)
 
-    if error == "ERR":        
+    if error == "ERR":
         return "ERR", None, None
     logging.info(f"relay {relay} fetched {len(data)} slots")
     
@@ -119,24 +103,11 @@ def get_relay_data(relay, url, batch_size, cursor, current_file_size, file_count
     next_cursor = determine_next_cursor(data, head_slot)
     return next_cursor, current_file_size, file_count
         
-def process_relay(relay, url, batch_size, head_slot, tail_slot):
-    """
-    Process a single relay by fetching its data, processing it, and saving it to files.
-    
-    Parameters:
-        relay: name of relay being processed
-        url: url to fetch data from
-        batch_size (int): The number of slots to fetch per batch.
-        head_slot (int): The slot to start processing from.        
-        tail_slot (int): The oldest slot loaded for this relay.        
-        
-    Returns:
-        bool: True if successful, False otherwise.
-    """    
-    cursor = "latest"    
+def process_relay(relay, url, batch_size, head_slot, latest_slot): 
+    cursor = latest_slot #"latest"    
     current_file_size = 0
     file_count = 1
-    logging.debug(f"processing relay {relay} with the following parameters: head_slot: {head_slot}, tail_slot: {tail_slot}, cursor: {cursor}")
+    logging.info(f"processing relay {relay} with the following parameters: head_slot: {head_slot}, cursor: {cursor}")
 
     while cursor != "0":
         logging.debug(f"relay {relay}, cursor value: {cursor}")
