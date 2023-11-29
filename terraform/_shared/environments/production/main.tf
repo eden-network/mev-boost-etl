@@ -18,13 +18,20 @@ module "service_account" {
     "run.jobs.run",
     "run.routes.invoke"
   ]
+
+  public_role_permissions = [
+    "bigquery.jobs.create",
+    "bigquery.tables.updateData"
+  ]
+
+  public_project_id = "eden-data-public"
 }
 
 module "bigquery_mev_boost" {
-  source = "../../modules/bigquery"
-
+  source = "../../modules/bigquery"  
   dataset_id           = "mev_boost"
   dataset_description  = "Dataset for housing mev-boost data"
+  public_project_id    = "eden-data-public"
   location             = "US"
 
   config_table_id      = "etl_config"

@@ -21,7 +21,7 @@ async def async_load_from_gcs_to_bigquery(client, bucket_uri):
     )
 
 def load_from_gcs_to_bigquery(client: Client, bucket_uri: str) -> bool:
-    logging.info(f"Loading data from {bucket_uri} to BigQuery {table_id_bids_staging}")
+    logging.info(f"loading data from {bucket_uri} to BigQuery {table_id_bids_staging}")
     try:
         table_ref = client.dataset(dataset_id).table(table_id_bids_staging)
         job_config = LoadJobConfig()
@@ -34,16 +34,16 @@ def load_from_gcs_to_bigquery(client: Client, bucket_uri: str) -> bool:
             job_config=job_config
         )
         job.result()
-        logging.info(f"Data from {bucket_uri} loaded into BigQuery")
+        logging.info(f"data from {bucket_uri} loaded into BigQuery")
 
     except BadRequest as e:
-        logging.error(f"Bad request error when loading from {bucket_uri} to BigQuery {table_id_bids_staging}: {e}")
+        logging.error(f"bad request error when loading from {bucket_uri} to BigQuery {table_id_bids_staging}: {e}")
         return False
     except Forbidden as e:
-        logging.error(f"Forbidden error when loading from {bucket_uri} to BigQuery {table_id_bids_staging}: {e}")
+        logging.error(f"forbidden error when loading from {bucket_uri} to BigQuery {table_id_bids_staging}: {e}")
         return False
     except Exception as e:
-        logging.error(f"Unexpected error occurred when loading from {bucket_uri} to BigQuery {table_id_bids_staging}: {e}")
+        logging.error(f"unexpected error occurred when loading from {bucket_uri} to BigQuery {table_id_bids_staging}: {e}")
         return False    
 
     return True

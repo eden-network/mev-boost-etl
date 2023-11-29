@@ -27,3 +27,8 @@ variable "service_account_email" {
   description = "The email address of the service account to use for authentication."
   type        = string
 }
+
+variable "public_project_id" {
+  description = "The GCP project ID of the public project."
+  type        = string
+}

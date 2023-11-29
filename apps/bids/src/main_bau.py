@@ -55,7 +55,7 @@ async def async_extract(client: Client) -> bool:
     return True
 
 async def async_execute():        
-    logging.info("initializing bids bau")    
+    logging.info("bids bau initializing")
 
     try:
         bigquery_client = Client(project=project_id_private)        
@@ -69,8 +69,10 @@ async def async_execute():
         if await async_load(bigquery_client) is False:
             sys.exit(1)
 
+        logging.info("bids bau completed")
+
     except Exception as e:
-        logging.error(f"An unexpected error occurred: {e}")        
+        logging.error(f"an unexpected error occurred: {e}")        
         sys.exit(1)
 
 if __name__ == '__main__':

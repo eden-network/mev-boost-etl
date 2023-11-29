@@ -17,7 +17,7 @@ async def async_push_bids_to_gcs(client: Client, gzip_file_bytes: bytes, object_
     )
 
 def push_bids_to_gcs(client: Client, gzip_file_bytes: bytes, object_name: str) -> bool:
-    logging.info(f"Uploading gzip bytes for {object_name} to GCS bucket {bucket_name}")
+    logging.info(f"uploading gzip bytes for {object_name} to GCS bucket {bucket_name}")
     try:        
         bucket = client.bucket(bucket_name)
         blob = bucket.blob(object_name)
@@ -27,10 +27,10 @@ def push_bids_to_gcs(client: Client, gzip_file_bytes: bytes, object_name: str) -
                 gzip_file_stream,
                 content_type='application/gzip'
             )
-        logging.info(f"Gzip for {object_name} uploaded to GCS bucket {bucket_name}")
+        logging.info(f"gzip for {object_name} uploaded to GCS bucket {bucket_name}")
 
     except Exception as e:
-        logging.error(f"Error occurred when uploading {object_name} to GCS: {e}")
+        logging.error(f"error occurred when uploading {object_name} to GCS: {e}")
         return False
 
     return True
