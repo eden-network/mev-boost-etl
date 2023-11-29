@@ -10,7 +10,7 @@ ENV PROJECT_ID_PRIVATE "eden-data-private"
 ENV DATASET_ID "mev_boost"
 ENV CONFIG_TABLE_ID "etl_config"
 ENV TABLE_ID_STAGING "bids_staging"
-ENV POD_CONFIG_TABLE_ID "bids_pod_config"
+ENV POD_CONFIG_TABLE_ID "bids_k8s_config"
 ENV BAU_CONFIG_TABLE_ID "bids_bau_config"
 ENV BUCKET_NAME "mev-boost-bids-prod"
 ENV BATCH_SIZE_MB 30

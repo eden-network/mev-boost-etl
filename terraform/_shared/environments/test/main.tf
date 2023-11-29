@@ -18,6 +18,13 @@ module "service_account" {
     "run.jobs.run",
     "run.routes.invoke"
   ]
+
+  public_role_permissions = [
+    "bigquery.jobs.create",
+    "bigquery.tables.updateData"
+  ]
+
+  public_project_id = "avalanche-304119"
 }
 
 module "bigquery_mev_boost" {
@@ -25,6 +32,7 @@ module "bigquery_mev_boost" {
 
   dataset_id           = "mev_boost"
   dataset_description  = "Dataset for housing mev-boost data"
+  public_project_id    = "avalanche-304119"
   location             = "US"
 
   config_table_id      = "etl_config"
@@ -34,7 +42,6 @@ module "bigquery_mev_boost" {
 
   service_account_email = module.service_account.service_account_email
   
-  public_project_id     = "avalanche-304119"
 }
 
 output "service_account_email" {

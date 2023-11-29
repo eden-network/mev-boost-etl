@@ -42,7 +42,7 @@ def extract(client: Client) -> bool:
     if len(successful_relays) > 0:
         logging.info(f"{len(successful_relays)} relays processed successfully, pushing data to bigquery")
         update_file_names('data/*_*.ndjson')
-        # push_to_big_query(client)
+        push_to_big_query(client)
     else:
         logging.error("no relays were processed successfully, exiting")
         return False
@@ -61,8 +61,8 @@ def execute():
         if extract(client) is False:
             sys.exit(1)
 
-        # if load(client) is False:
-        #     sys.exit(1)
+        if load(client) is False:
+            sys.exit(1)
 
         logging.info("payloads etl completed successfully")
 

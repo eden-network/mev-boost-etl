@@ -70,3 +70,22 @@ resource "kubernetes_service_account" "mev_boost_k8s_sa" {
 
   automount_service_account_token = true
 }
+
+resource "google_cloud_run_v2_job" "default" {
+  name     = var.transfer_job_name
+  location = var.transfer_job_location
+  template {
+    template {
+      containers {
+        image = var.transfer_job_container_image
+      }
+      service_account = var.service_account_email
+      timeout         = var.transfer_job_timeout
+    }
+  }
+  lifecycle {
+    ignore_changes = [
+      launch_stage, 
+    ]
+  }
+}

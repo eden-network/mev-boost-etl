@@ -32,7 +32,7 @@ where bd.relay = lhb.relay and
 );
 
 -- decorate bids with block_timestamp for final partitioning
-insert into `${project_id}.${dataset_id}.${bids_table_id}`
+create temp table bids_decorated as
 with blocks as (
 select  b.`timestamp` as block_timestamp,
         b.`number` as block_number          
@@ -43,6 +43,14 @@ select  b1.block_timestamp,
         lhb.*        
 from latest_bids lhb
 join blocks b1 on b1.block_number = lhb.block_number;
+
+insert into `${project_id}.${dataset_id}.${bids_table_id}`
+select *
+from bids_decorated;
+
+insert into `${public_project_id}.${dataset_id}.${bids_table_id}`
+select *
+from bids_decorated;
 
 insert into `${project_id}.${dataset_id}.${ui_table_id}`
 select  *

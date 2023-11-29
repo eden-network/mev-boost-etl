@@ -18,6 +18,13 @@ module "service_account" {
     "run.jobs.run",
     "run.routes.invoke"
   ]
+
+  public_role_permissions = [
+    "bigquery.jobs.create",
+    "bigquery.tables.updateData"
+  ]
+
+  public_project_id = "eden-data-public"
 }
 
 module "bigquery_mev_boost" {

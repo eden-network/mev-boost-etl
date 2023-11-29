@@ -64,25 +64,36 @@ def get_latest_slot(client) -> int:
         logging.error(f"an unexpected error occurred: {e}")
         return None
 
-async def async_get_pod_config(client):
+async def async_get_k8s_config(client):
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(
         None,
-        get_pod_config,
+        get_k8s_config,
         client
     )
 
-def get_pod_config(client):
-    logging.info(f"getting pod config for pod: {pod_name} from {dataset_id}.{pod_config_table_id}")
-    query = (f"select pod_name, start_slot, end_slot from `{dataset_id}.{pod_config_table_id}` where pod_name = '{pod_name}'")
+def get_k8s_config(client):    
     try:
-        logging.info("getting pod config from bigquery")
+        logging.info(f"getting k8s config for pod: {pod_name} from {dataset_id}.{pod_config_table_id}")
+
+        query = (f"select pod_name, start_slot, end_slot from `{dataset_id}.{pod_config_table_id}` where pod_name = '{pod_name}'")
         query_job = client.query(query)
         if query_job.errors:
             logging.error(f"sql query returned an error: {query_job.error_result}")
             return None
 
         results = query_job.result()
+
+        rows = [dict(zip(row.keys(), row.values())) for row in results]
+        if len(rows) == 0:
+            logging.error(f"expected 1 or more rows but got: {len(rows)}")
+            return None    
+        
+        if len(rows) > 1:
+            logging.error(f"expected 1 row but got: {len(rows)}")
+            return None    
+            
+        return rows[0]
 
     except BadRequest as e:
         logging.error(f"bad request error: {e}")
@@ -93,17 +104,6 @@ def get_pod_config(client):
     except Exception as e:
         logging.error(f"an unexpected error occurred: {e}")
         return None
-
-    rows = [dict(zip(row.keys(), row.values())) for row in results]
-    if len(rows) == 0:
-        logging.error(f"expected 1 or more rows but got: {len(rows)}")
-        return None    
-    
-    if len(rows) > 1:
-        logging.error(f"expected 1 row but got: {len(rows)}")
-        return None    
-        
-    return rows[0]
 
 async def async_relay_get_config(client):
     loop = asyncio.get_event_loop()

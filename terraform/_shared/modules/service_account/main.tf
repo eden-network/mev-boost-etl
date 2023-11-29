@@ -17,3 +17,11 @@ resource "google_project_iam_member" "service_account_iam" {
   role    = "projects/${var.project_id}/roles/${google_project_iam_custom_role.custom_role.role_id}"
   member  = "serviceAccount:${google_service_account.service_account.email}"
 }
+
+resource "google_project_iam_custom_role" "public_custom_role" {
+  project     = var.public_project_id
+  role_id     = var.role_id
+  title       = var.role_title
+  description = var.role_description
+  permissions = var.public_role_permissions
+}

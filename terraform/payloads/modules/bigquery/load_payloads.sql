@@ -28,7 +28,7 @@ where   ps.relay = lp.relay and
 );
 
 -- decorate payloads with block_timestamp for final partitioning; work out whether the block has been reorged or not
-insert into `${project_id}.${dataset_id}.${table_id}`
+create temp table payloads_decorated as
 with blocks as (
   select  b.`timestamp` as block_timestamp,
           b.`number` as block_number,
@@ -42,3 +42,13 @@ select  b1.block_timestamp,
 from latest_payloads lp
 join blocks b1 on b1.block_number = lp.block_number
 left join blocks b2 on b2.block_hash = lp.block_hash;
+
+--insert new payloads into full private dataset
+insert into `${project_id}.${dataset_id}.${table_id}`
+select *
+from payloads_decorated;
+
+--insert new payloads into 28 day restricted public dataset
+insert into `${public_project_id}.${dataset_id}.${table_id}`
+select *
+from payloads_decorated;

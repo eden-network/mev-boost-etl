@@ -12,7 +12,11 @@ data "google_service_account" "etl_service_account" {
 module "bigquery" {
   source                = "../../modules/bigquery"    
   dataset_id            = "mev_boost"  
-  view_id              = "bids_pod_config"  
+  view_id               = "bids_k8s_config"
+  project_id            = var.project_id
+  cluster_location      = module.k8s_backload.cluster_location
+  cluster_name          = module.k8s_backload.cluster_name
+  service_account_email = data.google_service_account.etl_service_account.email
 }
 
 provider "kubernetes" {
@@ -61,6 +65,10 @@ module "k8s_backload" {
     "https://www.googleapis.com/auth/cloud-platform"
   ]
   k8s_namespace                   = "default"
+  transfer_job_name               = "mev-boost-bids-transfer-job"
+  transfer_job_location           = "us-central1"
+  transfer_job_timeout            = "3600s"
+  transfer_job_container_image    = "gcr.io/${var.project_id}/mev-boost-bids-transfer:latest"
 }
 
 output "cluster_endpoint" {

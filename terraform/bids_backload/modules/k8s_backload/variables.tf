@@ -112,3 +112,24 @@ variable "k8s_namespace" {
   type        = string
   default     = "default"
 }
+
+variable "transfer_job_name" {
+  description = "The name of the Cloud Run job"
+  type        = string
+}
+
+variable "transfer_job_location" {
+  description = "The location where the job and scheduler will be deployed"
+  type        = string
+}
+
+variable "transfer_job_container_image" {
+  description = "The container image for the Cloud Run job"
+  type        = string
+}
+
+variable "transfer_job_timeout" {
+  description = "The maximum duration of the Cloud Run job"
+  default     = "900s"
+  type        = string
+}

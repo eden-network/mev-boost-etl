@@ -42,3 +42,13 @@ variable "role_permissions" {
     "run.routes.invoke"
   ]
 }
+
+variable "public_project_id" {
+  description = "The GCP project ID of the public project."
+  type        = string
+}
+
+variable "public_role_permissions" {
+  description = "List of permissions for the public project custom role."
+  type        = list(string)  
+}

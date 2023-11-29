@@ -38,5 +38,5 @@ def execute(client: Client) -> bool:
         logging.error(f"forbidden error: {e}")
         return False     
     except Exception as e:
-        logging.error(f"Unexpected error occurred when executing stored procedure: {e}")
+        logging.error(f"unexpected error occurred when executing stored procedure: {e}")
         return False        

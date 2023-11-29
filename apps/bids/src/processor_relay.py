@@ -59,7 +59,7 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int, start_
             return False
 
     except Exception as e:
-        logging.error(f"An error occurred while processing relay {relay}: {e}")
+        logging.error(f"an error occurred while processing relay {relay}: {e}")
         return False
 
     return True

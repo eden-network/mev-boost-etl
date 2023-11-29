@@ -1,3 +1,4 @@
+import sys
 import asyncio
 from google.cloud.storage import Client
 from google.cloud import bigquery
@@ -19,7 +20,7 @@ logging.getLogger("google.api_core").setLevel(logging.ERROR)
 logging.getLogger("asyncio").setLevel(logging.ERROR)
 
 async def async_execute() -> bool:
-    logging.info("initializing bids blob transfer")
+    logging.info("bids blob transfer initializing")
 
     try:
         storage_client = Client(project_id)
@@ -53,8 +54,10 @@ async def async_execute() -> bool:
 
         return True
     except Exception as e:
-        logging.error(f"An unexpected error occurred: {e}")
+        logging.error(f"an unexpected error occurred: {e}")
         return False
 
 if __name__ == '__main__':
-    asyncio.run(async_execute())
+    result = asyncio.run(async_execute())
+    if not result:
+        sys.exit(1)
