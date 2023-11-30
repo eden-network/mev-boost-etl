@@ -50,7 +50,7 @@ async def async_execute() -> bool:
         config = await async_relay_get_config(bigquery_client)
         if config is None:
             logging.error("failed to get config")
-            sys.exit(1)
+            return False
         else:
             logging.info("got relay config from bigquery", extra={
                 "payload": config
@@ -60,7 +60,7 @@ async def async_execute() -> bool:
 
         if pod_config is None:
             logging.error("failed to get k8s config")
-            sys.exit(1)
+            return False
         elif pod_config['process_attempted']:
             logging.info("k8s config already processed, waiting for 1 hour", extra={
                 "payload": pod_config             
@@ -68,10 +68,11 @@ async def async_execute() -> bool:
             await asyncio.sleep(3600)
             return True
         else:
+            await asyncio.sleep(pod_config['order']) # stagger the start of each pod as to not result in lock contention for updating the k8s lock table
             result = await async_update_k8s_config(bigquery_client)
             if not result:
                 logging.error("failed to update k8s config")
-                sys.exit(1)
+                return False
             else:
                 logging.info("starting k8s config", extra={
                     "payload": pod_config             
@@ -88,13 +89,13 @@ async def async_execute() -> bool:
                 logging.error(f"relay {config[idx]['relay']} processing failed")
 
         logging.info("bids backfill completed")        
-        return results
+        return True
         
     except Exception as e:
         logging.error(f"an unexpected error occurred: ${e}")
-        sys.exit(1)
+        return False
 
 if __name__ == '__main__':    
     result = asyncio.run(async_execute())
-    if not all(result):
+    if not result:
         sys.exit(1)

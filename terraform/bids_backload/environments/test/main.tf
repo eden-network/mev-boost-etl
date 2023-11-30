@@ -55,7 +55,7 @@ module "k8s_backload" {
   services_secondary_range_name   = "mev-boost-subnet-services"
   node_pool_name                  = "mev-boost-node-pool"
   node_pool_location              = "us-central1-a"
-  node_pool_count                 = 10
+  node_pool_count                 = 20  
   machine_type                    = "e2-medium"
   node_labels                     = { pool = "mev-boost-node-pool" }
   oauth_scopes                    = [

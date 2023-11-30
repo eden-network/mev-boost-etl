@@ -16,7 +16,7 @@ def should_upload(total_bytes: bytes, transformed_json_bytes: bytes) -> bool:
     return ((len(total_bytes) + len(transformed_json_bytes)) / (1024 * 1024)) > batch_size_mb
 
 async def async_process_relay(relay: str, base_url: str, rate_limit: int, start_slot: int, end_slot: int) -> bool:
-    logging.info(f"processing relay {relay}")
+    logging.info(f"processing relay {relay} from {start_slot} to {end_slot}")
     private_client = storage.Client(project=project_id_private)
     total_bytes = b''
 
@@ -28,8 +28,10 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int, start_
         start_slot = slots_downloaded[-1]
         end_slot = slots_downloaded[0]
         file_name = f"{relay}_{start_slot}_{end_slot}_{len(slots_downloaded)}.gz"
-        logging.info(f"checkpoint: {file_name}", extra={
+        logging.info(f"checkpoint: {relay}: {start_slot}-{end_slot} -> {len(slots_downloaded)} slots", extra={
             "payload": {
+                "filter": "metrics",
+                "relay": relay,
                 "file_name": file_name,                
                 "start_slot": start_slot,
                 "end_slot": end_slot,
@@ -48,7 +50,7 @@ async def async_process_relay(relay: str, base_url: str, rate_limit: int, start_
             json_bytes = await async_download_bids(url)
             
             if json_bytes is None:
-                logging.error(f"failed to slot bids extraction, see previous message for more details", extra={
+                logging.error(f"failed bids extraction for {relay}, see previous message for more details", extra={
                     "payload": {
                         "url": url,
                         "relay": relay,

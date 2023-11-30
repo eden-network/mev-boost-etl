@@ -76,7 +76,7 @@ def get_k8s_config(client):
     try:
         logging.info(f"getting k8s config for pod: {pod_name} from {dataset_id}.{pod_config_table_id}")
 
-        query = (f"select pod_name, start_slot, end_slot, process_attempted from `{dataset_id}.{pod_config_table_id}` where pod_name = '{pod_name}'")
+        query = (f"select pod_name, start_slot, end_slot, `order`, process_attempted from `{dataset_id}.{pod_config_table_id}` where pod_name = '{pod_name}'")
         query_job = client.query(query)
         if query_job.errors:
             logging.error(f"sql query returned an error: {query_job.error_result}")
