@@ -76,7 +76,7 @@ def get_k8s_config(client):
     try:
         logging.info(f"getting k8s config for pod: {pod_name} from {dataset_id}.{pod_config_table_id}")
 
-        query = (f"select pod_name, start_slot, end_slot from `{dataset_id}.{pod_config_table_id}` where pod_name = '{pod_name}'")
+        query = (f"select pod_name, start_slot, end_slot, process_attempted from `{dataset_id}.{pod_config_table_id}` where pod_name = '{pod_name}'")
         query_job = client.query(query)
         if query_job.errors:
             logging.error(f"sql query returned an error: {query_job.error_result}")
@@ -91,7 +91,7 @@ def get_k8s_config(client):
         
         if len(rows) > 1:
             logging.error(f"expected 1 row but got: {len(rows)}")
-            return None    
+            return None
             
         return rows[0]
 
@@ -113,10 +113,9 @@ async def async_relay_get_config(client):
         client
     )
 
-def get_relay_config(client) -> int:
+def get_relay_config(client) -> list | None:
     query = (f"select relay, url as base_url, bids_rate_limit as rate_limit from `{dataset_id}.{config_table_id}` where active = true")
-    try:
-        logging.info("getting relay config from bigquery")
+    try:        
         query_job = client.query(query)
         if query_job.errors:
             logging.error(f"sql query returned an error: {query_job.error_result}")
@@ -127,7 +126,7 @@ def get_relay_config(client) -> int:
         rows = [dict(zip(row.keys(), row.values())) for row in results]
         if len(rows) == 0:
             logging.error(f"expected 1 or more rows but got: {len(rows)}")
-            return None                         
+            return None                                 
 
         return rows
 

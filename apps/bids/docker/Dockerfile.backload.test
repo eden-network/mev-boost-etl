@@ -13,6 +13,7 @@ ENV TABLE_ID_STAGING "bids_staging"
 ENV POD_CONFIG_TABLE_ID "bids_k8s_config"
 ENV BUCKET_NAME "mev-boost-bids"
 ENV BATCH_SIZE_MB 50
+ENV POD_LOCK_TABLE_ID "bids_k8s_lock"
 
 # Set the working directory inside the container
 WORKDIR /app

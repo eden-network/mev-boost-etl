@@ -8,6 +8,17 @@ variable "view_id" {
   type        = string
 }
 
+variable "lock_table_id" {
+  description = "The ID of the BigQuery table for pod process locking."
+  type        = string
+}
+
+variable "labels" {
+  description = "A map of labels to assign to the tables created by this module."
+  type        = map(string)
+}
+
+
 variable "k8s_namespace" {
   description = "The Kubernetes namespace where the service account will be created."
   type        = string

@@ -1,0 +1,14 @@
+[
+    {
+        "description": "the name of the pod",
+        "mode": "REQUIRED",
+        "name": "pod_name",
+        "type": "STRING"
+    },
+    {
+        "description": "whether we've attemptd to process this pod",
+        "mode": "REQUIRED",
+        "name": "process_attempted",
+        "type": "BOOLEAN"
+    }
+]
