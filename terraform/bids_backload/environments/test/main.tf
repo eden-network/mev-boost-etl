@@ -13,10 +13,14 @@ module "bigquery" {
   source                = "../../modules/bigquery"    
   dataset_id            = "mev_boost"  
   view_id               = "bids_k8s_config"
+  lock_table_id         = "bids_k8s_lock"
   project_id            = var.project_id
   cluster_location      = module.k8s_backload.cluster_location
   cluster_name          = module.k8s_backload.cluster_name
   service_account_email = data.google_service_account.etl_service_account.email
+  labels                = {
+    env = "test"
+  }
 }
 
 provider "kubernetes" {
@@ -51,7 +55,7 @@ module "k8s_backload" {
   services_secondary_range_name   = "mev-boost-subnet-services"
   node_pool_name                  = "mev-boost-node-pool"
   node_pool_location              = "us-central1-a"
-  node_pool_count                 = 10
+  node_pool_count                 = 20  
   machine_type                    = "e2-medium"
   node_labels                     = { pool = "mev-boost-node-pool" }
   oauth_scopes                    = [
@@ -82,3 +86,8 @@ output "node_pool_name" {
 output "config_view_id" {
   value = module.bigquery.config_view_id
 }
+
+output "sink_writer_identity" {
+  value = module.bigquery.sink_writer_identity
+}
+

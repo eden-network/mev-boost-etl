@@ -15,7 +15,7 @@ def download_bids(url: str) -> bytes | None:
     try:
         response = requests.get(url, stream=True)
         if response.status_code == 200:
-            logging.info(f"successfully downloaded data for {url}.")
+            logging.debug(f"successfully downloaded data for {url}.")
             return response.content
         else:
             logging.error(f"failed to download data for {url}. response code: {response.status_code}")

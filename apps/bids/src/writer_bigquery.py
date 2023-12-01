@@ -10,6 +10,38 @@ load_dotenv()
 
 dataset_id = getenv("DATASET_ID")
 table_id_bids_staging = getenv("TABLE_ID_STAGING")
+pod_name = getenv("POD_NAME")
+pod_lock_table_id = getenv("POD_LOCK_TABLE_ID")
+
+async def async_update_k8s_config(client):
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(
+        None,
+        update_k8s_config,
+        client
+    )
+
+def update_k8s_config(client):
+    try:
+        logging.info(f"setting process_attempted in k8s config for pod: {pod_name} to true")
+
+        query = (f"update `{dataset_id}.{pod_lock_table_id}` set process_attempted = true where pod_name = '{pod_name}'")
+        query_job = client.query(query)
+        if query_job.errors:
+            logging.error(f"sql query returned an error: {query_job.error_result}")
+            return False
+
+        return True
+
+    except BadRequest as e:
+        logging.error(f"bad request error: {e}")
+        return False
+    except Forbidden as e:
+        logging.error(f"forbidden error: {e}")
+        return False
+    except Exception as e:
+        logging.error(f"an unexpected error occurred: {e}")
+        return False
 
 async def async_load_from_gcs_to_bigquery(client, bucket_uri):
     loop = asyncio.get_event_loop()
