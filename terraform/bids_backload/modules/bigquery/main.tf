@@ -1,6 +1,7 @@
 resource "google_bigquery_table" "k8s_lock" {  
   dataset_id = var.dataset_id
   table_id   = var.lock_table_id  
+  deletion_protection = false
 
   labels = var.labels
 
@@ -16,7 +17,7 @@ resource "google_bigquery_table" "config" {
     query = templatefile("${path.module}/config.sql", {
       project_id      = var.project_id,
       dataset_id      = var.dataset_id,
-      lock_table_id   = var.lock_table_id
+      lock_table_id   = google_bigquery_table.k8s_lock.table_id,
     })
     use_legacy_sql = false
   }

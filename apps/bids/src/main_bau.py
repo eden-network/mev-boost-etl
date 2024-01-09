@@ -2,6 +2,7 @@ import sys
 import asyncio
 from os import getenv
 import logging
+import json
 from google.cloud.bigquery import Client
 from dotenv import load_dotenv
 from reader_bigquery import async_get_bau_config, async_relay_get_config, async_get_latest_slot
@@ -14,8 +15,35 @@ load_dotenv()
 logging_level = getenv("LOGGING_LEVEL", "INFO")
 project_id_private = getenv("PROJECT_ID_PRIVATE")
 
+class JsonFormatter(logging.Formatter):
+    def format(self, record):    
+        config = getattr(record, 'config', None)
+        pod_config = getattr(record, 'pod_config', None)
+        payload = getattr(record, 'payload', None)
+        log_record = {
+            'severity': record.levelname,
+            'message': record.getMessage(),
+            'name': record.name,
+            'timestamp': self.formatTime(record, self.datefmt),            
+            'additional_info': {
+                'file_name': record.filename,
+                'function_name': record.funcName,
+                'line_no': record.lineno,
+                'config' : config or {},
+                'pod_config' : pod_config or {},
+                'payload': payload or {}
+            }
+        }
+        return json.dumps(log_record)
+
 logging.basicConfig(level=logging.getLevelName(logging_level))
 logging.getLogger("asyncio").setLevel(logging.ERROR)
+logging.getLogger("google.api_core").setLevel(logging.ERROR)
+
+log_handler = logging.StreamHandler()
+json_formatter = JsonFormatter()
+log_handler.setFormatter(json_formatter)
+logging.getLogger().handlers = [log_handler]
 
 async def async_extract(client: Client) -> bool:    
     latest_slot = await async_get_latest_slot(client)

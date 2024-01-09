@@ -56,6 +56,8 @@ resource "google_container_node_pool" "primary_preemptible_nodes" {
     machine_type = var.machine_type
     labels       = var.node_labels
     oauth_scopes = var.oauth_scopes
+    disk_size_gb = 20
+    disk_type    = "pd-standard"
   }
 }
 

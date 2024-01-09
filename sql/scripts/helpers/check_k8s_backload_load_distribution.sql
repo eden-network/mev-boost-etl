@@ -6,15 +6,9 @@ with numbers as (
           format('mev-boost-bids-statefulset-%d', x) as pod_name,
           8158048 - (x * 323) as start_slot,
           case  when x = 19 
-                then 8151601 
+                then 8151600 
                 else 8158048 - (x * 323) - 323 + 1 end as end_slot
   from numbers
-)
-select  rt.pod_name,
-        rt.start_slot,
-        rt.end_slot,
-        rt.`order`,
-        lt.process_attempted,        
-from range_table rt
-left join `${project_id}.${dataset_id}.${lock_table_id}` lt on rt.pod_name = lt.pod_name
-order by rt.pod_name
+)  
+select *, start_slot - end_slot
+from range_table 

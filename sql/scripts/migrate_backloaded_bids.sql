@@ -1,9 +1,8 @@
 declare start_slot int64; 
 declare end_slot int64; 
 declare existing_count int64;
-set start_slot = 7770000;
-set end_slot = 7780000;
-
+set start_slot = 6930000;
+set end_slot = 7180000;
 begin transaction;
   
   set existing_count = (

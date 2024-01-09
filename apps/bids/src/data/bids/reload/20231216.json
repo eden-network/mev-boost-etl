@@ -1,0 +1,26 @@
+[
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7988849"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7992746"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7986828"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7990375"
+    }
+]

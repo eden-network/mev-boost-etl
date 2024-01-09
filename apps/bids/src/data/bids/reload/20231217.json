@@ -1,0 +1,14 @@
+[
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7997035"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7997035"
+    }
+]

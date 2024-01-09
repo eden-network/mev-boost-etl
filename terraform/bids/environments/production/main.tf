@@ -53,8 +53,8 @@ module "etl" {
   job_name                     = "mev-boost-bids"
   container_image              = "gcr.io/${var.project_id}/mev-boost-bids-bau-etl:latest"
   scheduler_job_name           = "mev-boost-bids"
-  scheduler_schedule           = "*/15 * * * *"
-  job_timeout                  = "900s"
+  scheduler_schedule           = "0 * * * *"
+  job_timeout                  = "3600s"
 }
 
 output "stage_table_id" {

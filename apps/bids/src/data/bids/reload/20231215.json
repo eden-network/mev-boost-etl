@@ -1,0 +1,50 @@
+[
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7967049"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7932388"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7967055"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7940443"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7940443"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7981345"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7981345"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7981345"
+    }
+]

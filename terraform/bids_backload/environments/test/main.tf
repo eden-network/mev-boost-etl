@@ -71,7 +71,7 @@ module "k8s_backload" {
   k8s_namespace                   = "default"
   transfer_job_name               = "mev-boost-bids-transfer-job"
   transfer_job_location           = "us-central1"
-  transfer_job_timeout            = "3600s"
+  transfer_job_timeout            = "7200s"
   transfer_job_container_image    = "gcr.io/${var.project_id}/mev-boost-bids-transfer:latest"
 }
 

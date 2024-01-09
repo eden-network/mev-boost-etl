@@ -41,8 +41,8 @@ module "etl" {
   job_name                     = "mev-boost-payloads"  
   container_image              = "gcr.io/${var.project_id}/mev-boost-payloads-etl:latest"
   scheduler_job_name           = "mev-boost-payloads"
-  scheduler_schedule           = "*/15 * * * *"  
-  job_timeout                  = "900s"  
+  scheduler_schedule           = "0 * * * *"  
+  job_timeout                  = "3600s"  
 }
 
 output "table_id" {

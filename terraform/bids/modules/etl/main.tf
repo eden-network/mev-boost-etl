@@ -6,9 +6,16 @@ resource "google_cloud_run_v2_job" "default" {
     template {
       containers {
         image = var.container_image
+        resources {
+          limits = {
+            cpu    = "4"
+            memory = "8Gi"
+          }
+        }
       }
       service_account = var.service_account_email
       timeout         = var.job_timeout
+      max_retries     = 0
     }
   }
 

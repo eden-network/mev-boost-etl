@@ -1,7 +1,7 @@
 import unittest
 from reader_api import download_bids
 
-class TestDownloadBuilderBlocksReceived(unittest.TestCase):
+class TestDownloadBuilderBlocksReceived(unittest.TestCase):    
 
     def test_download_flashbots_bids_with_limit(self):
         url = "{base_url}?slot={slot}&limit={limit}"

@@ -1,0 +1,4274 @@
+[
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7096886"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097139"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7065090"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096895"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7065608"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7065219"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7065824"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7065707"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097276"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7065241"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096896"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7096778"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7097208"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7096888"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097141"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7065242"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096676"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7065221"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7065709"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096897"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7096779"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7097209"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097142"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7065078"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097278"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7065243"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7065222"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7065612"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096677"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096898"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7096780"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7065710"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7065828"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7065244"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7065223"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7065613"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7065829"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7096805"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7065096"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7097211"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096899"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097280"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7096781"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096679"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7065245"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7065830"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097145"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7096893"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7097212"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7065225"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097281"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7065098"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7065083"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097146"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7096894"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7065226"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096681"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7065832"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7065099"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7096808"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097282"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7098985"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7099115"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7098954"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067344"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7067346"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7098920"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067677"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7067553"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7099094"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7098952"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7098986"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7067259"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7067164"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7099116"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067345"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7098921"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7067610"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7098991"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7120190"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067678"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7099095"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7098953"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7067554"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7099066"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7098987"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7099117"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7098956"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067346"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7067611"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7120191"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7067268"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7098922"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7098992"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7099096"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7067349"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7067262"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067680"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7075006"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7099118"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7098957"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7098923"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7098993"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7120193"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7067168"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7098956"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067348"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7067350"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7067263"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067681"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7099069"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7098924"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7120194"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7075008"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7067557"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7067264"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7067271"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067349"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7067351"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7067614"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067682"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7099099"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7098925"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7098992"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7099071"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7098959"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7067272"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7120196"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067350"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7021085"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7066665"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6956871"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7042104"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6957079"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6957465"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7156950"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7161877"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6951893"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7122392"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7167420"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6936917"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097352"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7002205"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7016884"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7032396"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7077176"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7172349"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7011787"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6937312"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7177384"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7042447"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6932708"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7056868"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6951832"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7017332"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7026876"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7091862"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7136784"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7171829"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7052291"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7077470"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7077412"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7147337"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7082064"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6961897"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6987324"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6952232"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6932156"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7041982"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6957080"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7106743"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6987625"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7177017"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7117573"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7147306"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6981974"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6982080"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7082341"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7176905"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7016878"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7136844"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097214"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7002336"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7166942"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7122273"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7122270"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7171942"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7172289"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6972119"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6951730"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6987473"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6977191"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7122593"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7032071"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7061792"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6997015"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7097285"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7066974"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067460"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7047248"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7056755"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6932371"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6977409"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7041879"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7077289"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7092272"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7106855"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6952305"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6962330"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7122157"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6982303"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6977610"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7051711"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7016967"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7047565"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7126928"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7176793"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7082047"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7002257"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7132029"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7081834"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7022726"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6981866"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6977435"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7117137"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6997237"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7147079"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7011983"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7117370"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7062151"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7026877"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7051929"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6972008"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7016770"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7051808"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6936867"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7126834"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7122983"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7047251"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6996989"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7167284"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7092343"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7132447"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7027218"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7162177"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7056952"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7092210"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7156832"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7127173"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7091761"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6982429"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7117700"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6982356"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7011886"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096762"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7147197"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6972119"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7032198"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6962395"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7067093"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7012286"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6932157"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7172056"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7081946"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7077608"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7042376"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7126726"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6987435"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6987199"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6957206"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7022277"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7001969"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7032059"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7157309"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7056858"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7156920"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7161759"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7032537"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6937195"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6957541"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7091871"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7176913"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7132513"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7032197"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7026765"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6936748"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6932270"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7001870"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6956973"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6971997"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7042105"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7156714"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7096886"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6962134"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7012003"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6936868"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7177305"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7057273"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7061815"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6951894"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7016885"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7096974"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7027331"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7132147"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7131914"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7172424"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7147191"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6987685"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6936918"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6996788"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067096"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7061694"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6951833"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7117631"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7022284"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6982085"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6981967"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7177385"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7017333"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7096866"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7077413"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7147338"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6962485"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7161762"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7147656"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7056969"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6937313"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6972395"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7106943"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7106958"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7106744"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6987626"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6977302"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7062152"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7047397"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7081953"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7056869"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7062202"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7011788"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7082414"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7136845"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7177251"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7002337"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7122274"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7161878"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7167421"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7161653"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7167056"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6936868"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7066872"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7107325"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7127244"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6962003"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7122594"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7067379"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6951731"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7022161"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7047249"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6981975"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6977410"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7026988"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7052164"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7052292"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6972120"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7061793"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7041880"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097215"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7032397"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7022743"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6932273"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6982304"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7106845"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7012240"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6957195"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7077290"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7016991"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6962331"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7081835"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6997288"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7047132"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6981867"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7091863"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7092273"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7091969"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7167347"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096985"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7147080"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7136894"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7011895"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7052224"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7042319"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7082279"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7042097"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7077178"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6987474"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6932639"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7122984"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7106856"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7026878"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7031958"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7047619"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7127174"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7091762"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6996893"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7117138"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7117701"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7117390"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7156817"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7156952"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7001757"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7132448"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7147198"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6977436"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7032199"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6957081"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7172048"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7167060"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6936964"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096763"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7172057"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6972120"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6987744"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7022608"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6962396"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7002258"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6957207"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7176794"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7157310"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6952176"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7132152"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7067308"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7032060"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6977290"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7032538"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7122654"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7027219"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7137196"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7002207"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7177011"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7156921"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7097354"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6932710"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6961899"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7126727"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7011887"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7022409"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7066976"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6937196"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7161760"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6977193"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7056953"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7147528"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7016771"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6951837"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7042106"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7082343"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6936749"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7016880"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7117251"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7096975"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7132148"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7027332"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6996893"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6956974"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6997017"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7012287"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7147308"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7077472"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7147192"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7162249"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7057274"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7122394"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6936869"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6962135"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6987686"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6951834"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7047374"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7156715"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6982430"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7061869"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6971998"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7032198"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6977647"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6981968"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7157181"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7176907"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7122159"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7161831"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7147657"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7056970"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7136787"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067097"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7171944"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6972396"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7126930"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6932274"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7126950"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6987627"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7122430"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067462"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7001942"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7047567"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7077297"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7091763"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7047398"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6977612"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6937314"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7161763"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7026767"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7161654"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7166938"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7062153"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7042000"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6932408"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6957082"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7172425"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7001971"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7081954"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7132358"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7022420"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7167286"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7117632"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7077414"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7041881"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7062203"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7171832"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7061794"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7047250"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6996991"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7022744"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7016969"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7016992"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7052165"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7051810"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7051887"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7176915"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7056870"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7017276"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7081836"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7042378"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6932159"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7122275"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7107326"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7012241"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6977411"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7032073"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7132515"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7122595"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7047253"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7127245"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7057336"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7062273"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6981868"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7117372"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7002339"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7096986"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7132036"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6997018"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7147081"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7032398"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6957543"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6972121"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7136802"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7136895"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7056860"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7167348"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6962004"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6972010"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6996790"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7172292"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7106846"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7156834"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7001864"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7106857"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7117255"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7066975"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7061696"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6977713"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7031959"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7122985"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7052225"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7042320"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7166834"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7137257"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6962332"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7051827"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6936965"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7012363"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7137133"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7096764"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6972121"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7001758"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6932640"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7107255"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7177020"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7176795"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6932580"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7032200"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6982358"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7032539"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7047133"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6977437"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7056758"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7147199"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7022279"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7016887"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6987745"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7001872"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6952177"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7042450"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7022410"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7016772"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7132449"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7011888"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7026879"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7057210"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7077679"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6937197"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6936750"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7157239"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6982083"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7132149"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7027333"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7026956"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7122273"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7032519"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6977291"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7091983"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6956975"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7077179"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7091873"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7177387"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7122395"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6951838"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6977194"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7066874"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6936870"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6972333"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7056954"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7051714"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7077611"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6932711"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7096868"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6987687"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6951835"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7067381"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7092213"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6997290"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7091865"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6981969"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7117252"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7156716"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7082050"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7122160"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7126728"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7026880"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6977304"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7161832"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7167423"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6981977"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "6972397"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "6932375"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7126951"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6962136"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7156819"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7097217"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7067098"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7167059"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7117140"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6937315"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7161655"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7027358"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7106746"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7042001"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7061870"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7172426"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7082281"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7062154"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7117633"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6996895"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7122431"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "6962488"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7051932"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7016881"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6996992"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7081955"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6997241"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6957083"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7167287"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7162118"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6971900"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7067463"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7127176"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "7166946"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7016993"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7176916"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7082068"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "7041882"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "7042099"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6932275"
+    },
+    {
+        "domain": "relay.edennetwork.io",
+        "base_url": "https://relay.edennetwork.io/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "eden",
+        "slot": "6932160"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7122276"
+    },
+    {
+        "domain": "bloxroute.regulated.blxrbdn.com",
+        "base_url": "https://bloxroute.regulated.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteRegulated",
+        "slot": "6987321"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7156954"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "6987628"
+    },
+    {
+        "domain": "boost-relay.flashbots.net",
+        "base_url": "https://boost-relay.flashbots.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "flashbots",
+        "slot": "6987476"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "6987328"
+    },
+    {
+        "domain": "relay.ultrasound.money",
+        "base_url": "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "ultrasound",
+        "slot": "7107327"
+    },
+    {
+        "domain": "bloxroute.max-profit.blxrbdn.com",
+        "base_url": "https://bloxroute.max-profit.blxrbdn.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "bloxrouteMaxProfit",
+        "slot": "7011897"
+    },
+    {
+        "domain": "mainnet-relay.securerpc.com",
+        "base_url": "https://mainnet-relay.securerpc.com/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "manifold",
+        "slot": "7067096"
+    },
+    {
+        "domain": "mainnet.aestus.live",
+        "base_url": "https://mainnet.aestus.live/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "aestus",
+        "slot": "7012242"
+    },
+    {
+        "domain": "agnostic-relay.net",
+        "base_url": "https://agnostic-relay.net/relay/v1/data/bidtraces/builder_blocks_received",
+        "relay": "agnostic",
+        "slot": "7097289"
+    }
+]
