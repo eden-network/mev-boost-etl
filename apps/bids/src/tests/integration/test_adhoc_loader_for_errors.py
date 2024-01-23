@@ -11,7 +11,7 @@ class TestAttemptFailedSlotDownload(unittest.TestCase):
     def test_pull_effected_relay_slots_in(self):
         project_id_private = getenv("PROJECT_ID_PRIVATE")        
         client = Client(project=project_id_private)
-        data_key = "20240107"
+        data_key = "20240123"
         file_path = f"./data/bids/reload/{data_key}.json"
         with open(file_path, 'r', encoding='utf-8') as file:
             slots_to_load = json.load(file)
