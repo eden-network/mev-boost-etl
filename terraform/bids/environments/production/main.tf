@@ -63,7 +63,7 @@ module "etl" {
   location                 = local.location
   container_image          = "gcr.io/${local.project_id}/mev-boost-bids-bau-etl${local.etl_image_digest}"
   service_account_email    = local.service_account_email
-  job_timeout              = "10000s"
+  job_timeout              = "3600s"
   scheduler_job_name       = "mev-boost-bids"
   scheduler_schedule       = "0 * * * *"
 }

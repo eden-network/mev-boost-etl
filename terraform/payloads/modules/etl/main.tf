@@ -40,6 +40,7 @@ resource "google_cloud_run_v2_job" "default" {
       }
       service_account = var.service_account_email
       timeout         = var.job_timeout
+      max_retries     = 0
     }
   }
   lifecycle {
