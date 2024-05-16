@@ -58,8 +58,8 @@ variable "config_view_id" {
   type        = string
 }
 
-variable "load_storedproc_name" {
-  description = "The name of the stored procedure used to move data from staging to finalised"
+variable "load_stored_procedure_id" {
+  description = "The id of the stored procedure used to move data from staging to finalised"
   type        = string
 }
 

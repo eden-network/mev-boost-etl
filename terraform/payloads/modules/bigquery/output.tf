@@ -18,7 +18,7 @@ output "config_view_id" {
   value       = google_bigquery_table.config.table_id
 }
 
-output "load_storedproc_name" {
-  description = "The name of the stored procedure created to move data from staging to finalized."
-  value = google_bigquery_routine.sproc.routine_id
+output "load_stored_procedure_id" {
+  description = "The ID of the stored procedure created to move data from staging to finalized."
+  value       = google_bigquery_routine.sproc.routine_id
 }

@@ -1,4 +1,4 @@
-resource "google_storage_bucket" "bids_bucket" {
+resource "google_storage_bucket" "payloads_bucket" {
   name     = var.bucket_name
   location = var.location
 }
@@ -22,7 +22,7 @@ resource "google_storage_bucket" "failed_bucket" {
 }
 
 resource "google_storage_bucket_iam_binding" "bucket_binding" {
-  bucket  = google_storage_bucket.bids_bucket.name
+  bucket  = google_storage_bucket.payloads_bucket.name
   role    = var.bucket_iam_role
   members = var.bucket_iam_members
 }

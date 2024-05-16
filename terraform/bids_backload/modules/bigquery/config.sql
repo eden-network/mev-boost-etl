@@ -4,10 +4,10 @@ with numbers as (
 ), range_table as (
   select  x as `order`,
           format('mev-boost-bids-statefulset-%d', x) as pod_name,
-          8267094 - (x * 123) as start_slot,
+          9070687 - (x * 70) as start_slot,
           case  when x = 19 
-                then 8264642 
-                else 8267094 - (x * 123) - 123 + 1 end as end_slot
+                then 9069303
+                else 9070687 - (x * 70) - 70 + 1 end as end_slot
   from numbers  
 )
 select  rt.pod_name,

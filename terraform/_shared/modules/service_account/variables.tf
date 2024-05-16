@@ -36,7 +36,7 @@ variable "role_description" {
 variable "role_permissions" {
   description = "List of permissions for the custom role."
   type        = list(string)
-  default     = [
+  default = [
     "bigquery.jobs.create",
     "run.jobs.run",
     "run.routes.invoke"
@@ -50,5 +50,5 @@ variable "public_project_id" {
 
 variable "public_role_permissions" {
   description = "List of permissions for the public project custom role."
-  type        = list(string)  
+  type        = list(string)
 }
