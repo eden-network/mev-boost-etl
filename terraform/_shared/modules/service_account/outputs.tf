@@ -9,6 +9,6 @@ output "service_account_unique_id" {
 }
 
 output "custom_role_id" {
-  value = google_project_iam_custom_role.custom_role.role_id
+  value       = google_project_iam_custom_role.custom_role.role_id
   description = "The ID of the custom role."
 }

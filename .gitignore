@@ -272,8 +272,10 @@ $RECYCLE.BIN/
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,python,macos,windows,linux
 
 # Custom ignores
-app/data/*
 progress.log
+apps/*/Dockerfile.local
+apps/*/src/data/*
+
 
 ### Terraform ###
 # Local .terraform directories

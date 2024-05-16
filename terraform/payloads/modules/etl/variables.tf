@@ -1,5 +1,40 @@
-variable "project" {
+variable "logging_level" {
+  description = "The logging level to use for the deployment"
+  type        = string
+}
+
+variable "project_id" {
   description = "The project ID"
+  type        = string
+}
+
+variable "dataset_id" {
+  description = "The dataset ID where the tables and stored procedure are stored"
+  type        = string
+}
+
+variable "config_view_id" {
+  description = "The configuration view for loading payloads"
+  type        = string
+}
+
+variable "staging_table_id" {
+  description = "The staging table for the load"
+  type        = string
+}
+
+variable "load_stored_procedure_id" {
+  description = "The name of the stored procedure used to move data from the staging table to the final payloads table"
+  type        = string
+}
+
+variable "rate_limit_seconds" {
+  description = "The amount of time to wait in between requests for data from each relay"
+  type        = string
+}
+
+variable "bucket_name" {
+  description = "The name of the bucket where new payload files are initially staged"
   type        = string
 }
 

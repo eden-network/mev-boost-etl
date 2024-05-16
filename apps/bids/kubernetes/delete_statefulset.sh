@@ -1,0 +1,1 @@
+kubectl delete statefulset mev-boost-bids-statefulset

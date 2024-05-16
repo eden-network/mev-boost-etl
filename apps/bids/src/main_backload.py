@@ -1,45 +1,21 @@
-import time
-import sys
-import asyncio
-import json
-from os import getenv, path
-
-import logging
-from google.cloud.bigquery import Client
+import sys, asyncio, logging
+from os import getenv
 from dotenv import load_dotenv
-from reader_bigquery import async_get_k8s_config, async_relay_get_config
-from writer_bigquery import async_update_k8s_config
-from processor_relay import async_process_relay
-
 load_dotenv()
 
-logging_level = getenv("LOGGING_LEVEL", "INFO")
-project_id_private = getenv("PROJECT_ID_PRIVATE")
+from custom_logger import JsonFormatter
+from google.cloud.bigquery import Client
+from bigquery.reader import async_get_k8s_config, async_relay_get_config
+from bigquery.writer import async_update_k8s_config
+from api.extractor import async_process_relay
 
-class JsonFormatter(logging.Formatter):
-    def format(self, record):    
-        config = getattr(record, 'config', None)
-        pod_config = getattr(record, 'pod_config', None)
-        payload = getattr(record, 'payload', None)
-        log_record = {
-            'severity': record.levelname,
-            'message': record.getMessage(),
-            'name': record.name,
-            'timestamp': self.formatTime(record, self.datefmt),            
-            'additional_info': {
-                'file_name': record.filename,
-                'function_name': record.funcName,
-                'line_no': record.lineno,
-                'config' : config or {},
-                'pod_config' : pod_config or {},
-                'payload': payload or {}
-            }
-        }
-        return json.dumps(log_record)
+logging_level = getenv("LOGGING_LEVEL", "INFO")
+project_id = getenv("PROJECT_ID")
 
 logging.basicConfig(level=logging.getLevelName(logging_level))
 logging.getLogger("google.api_core").setLevel(logging.ERROR)
 logging.getLogger("asyncio").setLevel(logging.ERROR)
+
 log_handler = logging.StreamHandler()
 json_formatter = JsonFormatter()
 log_handler.setFormatter(json_formatter)
@@ -49,7 +25,7 @@ async def async_execute() -> bool:
     logging.info("initializing bids backfill")
 
     try:
-        bigquery_client = Client(project=project_id_private)
+        bigquery_client = Client(project=project_id)
 
         config = await async_relay_get_config(bigquery_client)
         if config is None:
@@ -58,7 +34,7 @@ async def async_execute() -> bool:
         else:
             logging.info("got relay config from bigquery", extra={
                 "config": config
-            })   
+            })
 
         pod_config = await async_get_k8s_config(bigquery_client)
 
