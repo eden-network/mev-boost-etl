@@ -1,6 +1,4 @@
-import asyncio
-import json
-import logging
+import asyncio, json, logging
 from datetime import datetime, date
 from io import BytesIO
 from gzip import GzipFile

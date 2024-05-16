@@ -1,0 +1,13 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '-t'
+      - 'gcr.io/$PROJECT_ID/mev-boost-bids-backload-etl'
+      - '--build-arg'
+      - 'PROJECT_ID=$PROJECT_ID'
+      - '-f'
+      - './Dockerfile.backload'
+      - '.'
+images:
+  - 'gcr.io/$PROJECT_ID/mev-boost-bids-backload-etl'

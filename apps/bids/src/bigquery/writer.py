@@ -1,12 +1,7 @@
-import asyncio
-import logging
+import asyncio, logging
 from google.cloud.bigquery import Client, LoadJobConfig, SourceFormat
 from google.api_core.exceptions import BadRequest, Forbidden
-from dotenv import load_dotenv
 from os import getenv
-from io import BytesIO
-
-load_dotenv()
 
 dataset_id = getenv("DATASET_ID")
 table_id_bids_staging = getenv("TABLE_ID_STAGING")
@@ -43,16 +38,16 @@ def update_k8s_config(client):
         logging.error(f"an unexpected error occurred: {e}")
         return False
 
-async def async_load_from_gcs_to_bigquery(client, bucket_uri):
+async def async_write(client, bucket_uri):
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(
         None,
-        load_from_gcs_to_bigquery,
+        write,
         client,
         bucket_uri        
     )
 
-def load_from_gcs_to_bigquery(client: Client, bucket_uri: str) -> bool:
+def write(client: Client, bucket_uri: str) -> bool:
     logging.info(f"loading data from {bucket_uri} to BigQuery {table_id_bids_staging}")
     try:
         table_ref = client.dataset(dataset_id).table(table_id_bids_staging)

@@ -1,10 +1,5 @@
-import logging
+import os, logging, asyncio
 from google.api_core.exceptions import BadRequest, Forbidden
-from dotenv import load_dotenv
-import os
-import asyncio
-
-load_dotenv()
 
 dataset_id = os.getenv("DATASET_ID")
 pod_name = os.getenv("POD_NAME")
@@ -126,7 +121,7 @@ def get_relay_config(client) -> list | None:
         rows = [dict(zip(row.keys(), row.values())) for row in results]
         if len(rows) == 0:
             logging.error(f"expected 1 or more rows but got: {len(rows)}")
-            return None                                 
+            return None
 
         return rows
 

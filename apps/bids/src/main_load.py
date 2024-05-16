@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from custom_logger import JsonFormatter
-from cloud_storage.transferor import async_execute as async_transfer
+from bigquery.executor import async_execute as async_load
 
 logging_level = getenv("LOGGING_LEVEL", "INFO")
 
@@ -18,17 +18,17 @@ log_handler.setFormatter(json_formatter)
 logging.getLogger().handlers = [log_handler]
 
 async def async_execute() -> bool:
-    logging.info("bids blob transfer running")
+    logging.info("bids load running")
 
     try:        
-        if await async_transfer() is False:
-            sys.exit(1)        
+        if await async_load() is False:
+            sys.exit(1)
 
-        logging.info("bids blobs transfer completed")
+        logging.info("bids load completed")
 
     except Exception as e:
         logging.error(f"an unexpected error occurred: {e}")        
         sys.exit(1)
 
 if __name__ == '__main__':
-    asyncio.run(async_execute())    
+    asyncio.run(async_execute())

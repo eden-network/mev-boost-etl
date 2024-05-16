@@ -1,9 +1,9 @@
 import unittest
 from main_bau import async_execute
 
-class TestBau(unittest.IsolatedAsyncioTestCase):    
+class TestBidsBauFull(unittest.IsolatedAsyncioTestCase):    
 
-    async def test_async_execute_integration(self):
+    async def test_async_execute(self):
         await async_execute()                        
 
 if __name__ == '__main__':

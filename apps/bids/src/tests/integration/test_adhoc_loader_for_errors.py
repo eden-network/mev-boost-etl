@@ -1,16 +1,15 @@
-import unittest
-import json
+import unittest, json
 from os import getenv
-from google.cloud.storage import Client
-from reader_api import download_bids
+from google.cloud import storage
+from cloud_storage.writer import push_bids_to_gcs
+from api.reader import download_bids
 from transformer_json_bytes import transform_bytes, gzip_bytes
-from writer_cloud_storage import push_bids_to_gcs
 
 class TestAttemptFailedSlotDownload(unittest.TestCase):
 
     def test_pull_effected_relay_slots_in(self):
-        project_id_private = getenv("PROJECT_ID_PRIVATE")        
-        client = Client(project=project_id_private)
+        project_id = getenv("PROJECT_ID")        
+        client = storage.Client(project=project_id)
         data_key = "20240123"
         file_path = f"./data/bids/reload/{data_key}.json"
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -35,8 +34,8 @@ class TestAttemptFailedSlotDownload(unittest.TestCase):
             push_bids_to_gcs(client, gzipped_bytes, f"{relay}_{slot}_T.gz")
 
     def test_download_bloxrouteMaxProfit_bids_with_no_limit(self):
-        project_id_private = getenv("PROJECT_ID_PRIVATE")        
-        client = Client(project=project_id_private)
+        project_id = getenv("PROJECT_ID")        
+        client = storage.Client(project=project_id)
         url = "{base_url}?slot={slot}"
         relay = "bloxrouteMaxProfit"
         base_url = "https://relay.ultrasound.money/relay/v1/data/bidtraces/builder_blocks_received"

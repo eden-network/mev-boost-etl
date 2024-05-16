@@ -1,26 +1,23 @@
-import asyncio
-import logging
-from google.cloud.bigquery import Client
+import asyncio, logging
+from google.cloud import bigquery
 from google.api_core.exceptions import BadRequest, Forbidden
-from dotenv import load_dotenv
 from os import getenv
 
-load_dotenv()
-
+project_id = getenv("PROJECT_ID")
 dataset_id = getenv("DATASET_ID")
 load_sp = getenv("LOAD_SP_ID")
 
-async def async_execute(client) -> bool:
+async def async_execute() -> bool:
     loop = asyncio.get_event_loop()
     return await loop.run_in_executor(
         None,
-        execute,
-        client             
+        execute
     )
 
-def execute(client: Client) -> bool:
+def execute() -> bool:
     logging.info(f"executing stored procedure {dataset_id}.{load_sp}")
-    try:        
+    try:  
+        client = bigquery.Client(project=project_id)      
         sql = f"CALL `{dataset_id}.{load_sp}`();"        
         query_job = client.query(sql)                
         if query_job.errors:

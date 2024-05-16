@@ -1,7 +1,5 @@
-import asyncio
-import requests
+import asyncio, requests, logging
 from requests.exceptions import RequestException
-import logging
 
 async def async_download_bids(url: str) -> bytes | None:
     loop = asyncio.get_event_loop()
@@ -13,7 +11,7 @@ async def async_download_bids(url: str) -> bytes | None:
 
 def download_bids(url: str) -> bytes | None:
     try:
-        response = requests.get(url, stream=True)
+        response = requests.get(url, stream=True, timeout=60)
         if response.status_code == 200:
             logging.debug(f"successfully downloaded data for {url}.")
             return response.content

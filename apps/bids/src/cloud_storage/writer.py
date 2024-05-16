@@ -1,6 +1,5 @@
+import asyncio, logging
 from google.cloud.storage import Client
-import asyncio
-import logging
 from io import BytesIO
 from os import getenv
 

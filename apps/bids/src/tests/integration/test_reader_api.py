@@ -1,5 +1,5 @@
 import unittest
-from reader_api import download_bids
+from api.reader import download_bids
 
 class TestDownloadBuilderBlocksReceived(unittest.TestCase):    
 

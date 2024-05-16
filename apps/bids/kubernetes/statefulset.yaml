@@ -16,7 +16,7 @@ spec:
       serviceAccountName: mev-boost-k8s-sa
       containers:
         - name: mev-boost-bids-container
-          image: gcr.io/enduring-art-207419/mev-boost-bids-backload-etl:latest
+          image: gcr.io/${PROJECT_ID}/mev-boost-bids-backload-etl:latest
           env:
             - name: POD_NAME
               valueFrom:
