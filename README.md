@@ -1,6 +1,6 @@
 # MEV Boost ETL
 
-This repository contains the code and infrastructure for managing the extraction, transformation, and loading (ETL) processes for MEV-Boost data, including both bids and payloads. The system handles real-time data collection, processing, and storage, as well as historical data backloading using Kubernetes.
+This repository contains the code and infrastructure for managing the extraction, transformation, and loading (ETL) processes for MEV-Boost data, including both bids and payloads. The system handles batch data collection, processing, and storage, as well as historical data backloading using Kubernetes.
 
 ## Overview
 
