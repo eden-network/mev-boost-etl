@@ -7,7 +7,7 @@ module "service_account" {
   source           = "../../modules/service_account"
   account_id       = "mev-boost-etl-agent"
   display_name     = "mev-boost-etl-agent"
-  description      = "Service account with cloud run permissions and read/write access to mev_boost dataset in eden-data-private, read/write access to mev_boost dataset in eden-data-public"
+  description      = "Service account with cloud run permissions and read/write access to mev_boost dataset in the private project, read/write access to mev_boost dataset in the public project"
   project_id       = var.project_id
   role_id          = "mev_boost_etl_agent"
   role_title       = "mev-boost-etl-agent"
