@@ -1,12 +1,17 @@
-import logging
+import logging, asyncio
+from os import getenv
 from google.api_core.exceptions import BadRequest, Forbidden
-from dotenv import load_dotenv
-import os
 
-load_dotenv()
+dataset_id = getenv("DATASET_ID")
+config_view_id = getenv("CONFIG_VIEW_ID")
 
-dataset_id = os.getenv("DATASET_ID")
-config_view_id = os.getenv("CONFIG_VIEW_ID")
+async def async_get_config(client):
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(
+        None,
+        get_config,
+        client
+    )
 
 def get_config(client):
     query = (f"select relay, url, batch_size, head_slot from `{dataset_id}.{config_view_id}` where active = true")
@@ -40,6 +45,14 @@ def get_config(client):
             return None
         
     return rows
+
+async def async_get_latest_slot(client):
+    loop = asyncio.get_event_loop()
+    return await loop.run_in_executor(
+        None,
+        get_latest_slot,
+        client
+    )
 
 def get_latest_slot(client) -> int:
     query = (f"select max(block_slot) as slot from `public-data-finance.crypto_ethereum2.beacon_blocks` where date(block_timestamp) = current_date('UTC')")
